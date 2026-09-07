@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vuka Automation | AI Automation Agency</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0B0F19;
+            --bg-card: #131A2C;
+            --teal: #00A6A6;
+            --purple: #8A2BE2;
+            --orange: #FF6B35;
+            --text-main: #FFFFFF;
+            --text-muted: #A0AABF;
+        }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-dark); color: var(--text-main); margin: 0; line-height: 1.7; overflow-x: hidden; }
+        h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
+        .gradient-text { background: linear-gradient(90deg, var(--teal), var(--purple), var(--orange)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        /* NAVBAR */
+        nav { position: fixed; top: 0; width: 100%; background: rgba(11, 15, 25, 0.8); backdrop-filter: blur(15px); border-bottom: 1px solid rgba(255,255,255,0.1); z-index: 1000; padding: 15px 0; }
+        .nav-container { max-width: 1200px; margin: auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+        .logo img { height: 50px; }
+        .nav-links a { color: var(--text-muted); text-decoration: none; margin-left: 25px; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--teal); }
+        
+        /* HERO */
+        .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; padding: 0 20px; }
+        .hero-background { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 50% 50%, rgba(0,166,166,0.2), transparent 60%), radial-gradient(circle at 80% 20%, rgba(138,43,226,0.2), transparent 40%); z-index: -1; }
+        .hero h1 { font-size: 4rem; margin-bottom: 20px; line-height: 1.1; }
+        .hero p { font-size: 1.2rem; color: var(--text-muted); max-width: 800px; margin-bottom: 40px; }
+        .cta-button { background: linear-gradient(90deg, var(--teal), var(--purple)); padding: 18px 40px; border-radius: 50px; text-decoration: none; color: white; font-weight: 600; transition: transform 0.3s, box-shadow 0.3s; }
+        .cta-button:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,166,166,0.3); }
+
+        /* SERVICES */
+        .services { max-width: 1200px; margin: 100px auto; padding: 0 20px; }
+        .services h2 { font-size: 2.5rem; text-align: center; margin-bottom: 60px; }
+        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .service-card { background: var(--bg-card); padding: 40px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05); transition: transform 0.3s, border-color 0.3s; }
+        .service-card:hover { transform: translateY(-10px); border-color: var(--teal); }
+        .service-icon { font-size: 2.5rem; margin-bottom: 20px; }
+        .service-card h3 { color: var(--teal); }
+        .service-card p { color: var(--text-muted); font-size: 0.95rem; }
+
+        /* PROCESS / WHY US */
+        .why-us { background: var(--bg-card); padding: 80px 20px; margin-top: 50px; }
+        .why-container { max-width: 1200px; margin: auto; text-align: center; }
+        .why-container h2 { font-size: 2.5rem; margin-bottom: 50px; }
+        .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .step { padding: 30px; background: rgba(11,15,25,0.5); border-radius: 10px; }
+        .step-number { font-size: 3rem; font-weight: 700; background: linear-gradient(90deg, var(--orange), var(--purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        /* CTA */
+        .final-cta { text-align: center; padding: 100px 20px; }
+        .final-cta h2 { font-size: 3rem; }
+        .final-cta p { color: var(--text-muted); margin-bottom: 30px; }
+        
+        /* FOOTER */
+        footer { text-align: center; padding: 40px; border-top: 1px solid rgba(255,255,255,0.1); color: var(--text-muted); font-size: 0.9rem; }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo"><img src="YOUR_LOGO_LINK_HERE.png" alt="Vuka Automation"></div>
+            <div class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#why">Why Us</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <div class="hero">
+        <div class="hero-background"></div>
+        <h1>Automation That<br><span class="gradient-text">Awakens Growth</span></h1>
+        <p>We build intelligent AI systems that eliminate manual admin, streamline operations, and unlock untapped revenue for modern businesses.</p>
+        <a href="https://wa.me/27YOUR_NUMBER" class="cta-button">Book a Free Call</a>
+    </div>
+
+    <!-- SERVICES -->
+    <div id="services" class="services">
+        <h2>Enterprise AI Solutions</h2>
+        <div class="service-grid">
+            <div class="service-card"><div class="service-icon">🔍</div><h3>Lead Generation & Market Intelligence</h3><p>Custom data scraping to find your exact target clients. Weekly "Lead Engine" reports delivered to your inbox.</p></div>
+            <div class="service-card"><div class="service-icon">🤖</div><h3>AI Chatbots & Communication</h3><p>24/7 WhatsApp and web chatbots that answer questions, qualify leads, and book appointments.</p></div>
+            <div class="service-card"><div class="service-icon">⚙️</div><h3>Workflow Automation (n8n)</h3><p>Connect your business tools so data flows automatically. Automate invoices, follow-ups, and reports.</p></div>
+            <div class="service-card"><div class="service-icon">🧠</div><h3>Custom AI Agents & RAG</h3><p>Multi-step AI agents that execute tasks based on your logic, and read your files for accurate answers.</p></div>
+            <div class="service-card"><div class="service-icon">📊</div><h3>Executive Dashboards</h3><p>Real-time dashboards pulling daily sales, operations, and marketing metrics automatically.</p></div>
+            <div class="service-card"><div class="service-icon">🎙️</div><h3>AI Voice Agents</h3><p>Automate the front desk. AI voice agents answer calls and handle FAQs without adding headcount.</p></div>
+        </div>
+    </div>
+
+    <!-- WHY US -->
+    <div id="why" class="why-us">
+        <div class="why-container">
+            <h2>Why Choose <span class="gradient-text">Vuka Automation?</span></h2>
+            <div class="steps">
+                <div class="step"><div class="step-number">01</div><h3>Discovery</h3><p>We map out your workflow and identify exactly where your time and money are leaking.</p></div>
+                <div class="step"><div class="step-number">02</div><h3>Build</h3><p>We design a proprietary automation blueprint tailored to your business.</p></div>
+                <div class="step"><div class="step-number">03</div><h3>Scale</h3><p>We monitor, maintain, and optimize your systems so they keep delivering results.</p></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FINAL CTA -->
+    <div id="contact" class="final-cta">
+        <h2>Ready to <span class="gradient-text">Wake Up</span> Your Business?</h2>
+        <p>Proudly South African. Based in Pretoria.</p>
+        <a href="mailto:vukaautomation@gmail.com" class="cta-button">📧 vukaautomation@gmail.com</a>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Vuka Automation. All rights reserved. "Automation That Awakens Growth."</p>
+    </footer>
+</body>
+</html>
