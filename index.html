@@ -4,49 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vuka Automation | Enterprise AI Systems Integrator</title>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        body { margin: 0; font-family: 'Space Grotesk', sans-serif; background-color: #FFFFFF; color: #0B1F3A; line-height: 1.6; }
+        body { margin: 0; font-family: 'Lora', serif; background-color: #FFFFFF; color: #0B1F3A; line-height: 1.7; }
         
         /* NAVBAR */
         nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background-color: #FFFFFF; border-bottom: 2px solid #0B1F3A; }
-        .logo img { height: 60px; }
-        .nav-links a { color: #0B1F3A; text-decoration: none; margin-left: 20px; font-weight: bold; }
-        .nav-links a:hover { color: #00A6A6; }
+        .logo img { height: 100px; } /* BIG LOGO HERE */
+        .nav-links a { color: #0B1F3A; text-decoration: none; margin-left: 20px; font-weight: 600; }
+        .nav-links a:hover { color: #FF6B35; }
 
         /* HERO */
-        .hero { text-align: center; padding: 60px 20px; }
-        .hero h1 { font-size: 3.2rem; margin: 0; color: #0B1F3A; }
-        .hero h1 span { color: #00A6A6; }
-        .hero p { color: #333333; font-size: 1.1rem; max-width: 800px; margin: 20px auto; }
-        .cta-button { display: inline-block; background: #00A6A6; color: white; padding: 16px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; margin-top: 20px; }
+        .hero { text-align: center; padding: 100px 20px; position: relative; background: url('techbg.jpg') center/cover no-repeat, radial-gradient(circle at center, #FFFFFF, #E0F2FE); }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: 4rem; margin: 0; color: #0B1F3A; }
+        .hero h1 span { color: #FF6B35; }
+        .hero p { font-size: 1.2rem; color: #333; max-width: 700px; margin: 20px auto; background: rgba(255,255,255,0.8); padding: 10px; border-radius: 8px; }
+        .cta-button { display: inline-block; background: #FF6B35; color: white; padding: 20px 50px; border-radius: 50px; text-decoration: none; font-weight: bold; margin-top: 20px; box-shadow: 0 4px 15px rgba(255,107,53,0.4); }
         .cta-button:hover { background: #0B1F3A; }
 
         /* SECTIONS */
-        .section-title { text-align: center; font-size: 2.2rem; color: #0B1F3A; margin-bottom: 40px; }
+        .section-title { text-align: center; font-family: 'Playfair Display', serif; font-size: 2.8rem; color: #0B1F3A; margin-bottom: 40px; }
 
         /* CARDS */
-        .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .card { background: #F7F9FA; border: 1px solid #E0E0E0; border-radius: 8px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
-        .card h3 { color: #0B1F3A; margin-top: 0; font-size: 1.2rem; }
-        .card p { color: #555555; font-size: 0.95rem; }
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .card { background: #F7F9FA; border: 1px solid #E0E0E0; border-radius: 8px; padding: 25px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .card h3 { font-family: 'Playfair Display', serif; color: #0B1F3A; margin-top: 0; font-size: 1.4rem; }
+        .card p { color: #555; font-size: 0.95rem; }
 
         /* STACK TABLE */
         .stack-table { max-width: 800px; margin: 0 auto; border-collapse: collapse; width: 100%; }
         .stack-table th, .stack-table td { border: 1px solid #DDD; padding: 12px; text-align: left; }
-        .stack-table th { background-color: #0B1F3A; color: white; }
+        .stack-table th { background-color: #0B1F3A; color: white; font-family: 'Playfair Display', serif; }
         .stack-table tr:nth-child(even) { background-color: #F7F9FA; }
 
         /* CONTACT */
         .contact-section { background: #0B1F3A; color: white; padding: 60px 20px; text-align: center; }
-        .contact-section h2 { color: #00A6A6; font-size: 2.2rem; }
+        .contact-section h2 { font-family: 'Playfair Display', serif; color: #FF6B35; font-size: 2.8rem; }
         .form-container { max-width: 600px; margin: 0 auto; display: grid; gap: 15px; text-align: left; }
         .form-container input, .form-container textarea { width: 100%; padding: 15px; border-radius: 5px; border: none; font-family: inherit; }
-        .form-container button { background: #00A6A6; color: white; border: none; padding: 15px; border-radius: 5px; font-weight: bold; cursor: pointer; }
+        .form-container button { background: #FF6B35; color: white; border: none; padding: 15px; border-radius: 5px; font-weight: bold; cursor: pointer; }
 
         /* FOOTER */
-        footer { background: #0B1F3A; text-align: center; padding: 30px; color: #FFFFFF; border-top: 5px solid #00A6A6; }
-        .socials a { color: #00A6A6; text-decoration: none; margin: 0 10px; }
+        footer { background: #0B1F3A; text-align: center; padding: 30px; color: #FFFFFF; border-top: 5px solid #FF6B35; }
+        .socials a { color: #FF6B35; text-decoration: none; margin: 0 10px; }
     </style>
 </head>
 <body>
@@ -70,72 +70,72 @@
     </div>
 
     <!-- INDUSTRIES -->
-    <div id="industries" style="padding: 40px 0; background: #FFFFFF;">
+    <div id="industries" style="padding: 60px 0; background: #FFFFFF;">
         <h2 class="section-title">Industries We Serve</h2>
         <div class="cards-grid">
-            <div class="card"><h3>Mining & Energy</h3><p>Automating compliance reports, safety data entry, and equipment monitoring.</p></div>
-            <div class="card"><h3>Retail & Wholesale</h3><p>Automating inventory management, stock forecasting, and supplier communications.</p></div>
-            <div class="card"><h3>Logistics & E-Commerce</h3><p>Automating fleet route planning, order tracking, and dispatch workflows.</p></div>
-            <div class="card"><h3>Financial Services & Banking</h3><p>Automating sensitive document processing, KYC checks, and client onboarding.</p></div>
-            <div class="card"><h3>Manufacturing</h3><p>Automating quality control logs, invoice processing, and supply chain alerts.</p></div>
-            <div class="card"><h3>Telecommunications & ICT</h3><p>Automating network ticket routing, customer onboarding, and data integration.</p></div>
-            <div class="card"><h3>Agriculture & Agribusiness</h3><p>Automating yield tracking, supplier data collection, and export paperwork.</p></div>
-            <div class="card"><h3>Tourism & Hospitality</h3><p>Automating booking management, customer feedback responses, and staff scheduling.</p></div>
-            <div class="card"><h3>Real Estate & Property</h3><p>Automating lead qualification, lease document processing, and property listing updates.</p></div>
+            <div class="card"><h3>⛏️ Mining & Energy</h3><p>Automating compliance reports, safety data entry, and equipment monitoring.</p></div>
+            <div class="card"><h3>🛒 Retail & Wholesale</h3><p>Automating inventory management, stock forecasting, and supplier communications.</p></div>
+            <div class="card"><h3>🚚 Logistics & E-Commerce</h3><p>Automating fleet route planning, order tracking, and dispatch workflows.</p></div>
+            <div class="card"><h3>🏦 Financial Services & Banking</h3><p>Automating sensitive document processing, KYC checks, and client onboarding.</p></div>
+            <div class="card"><h3>🏭 Manufacturing</h3><p>Automating quality control logs, invoice processing, and supply chain alerts.</p></div>
+            <div class="card"><h3>📡 Telecommunications & ICT</h3><p>Automating network ticket routing, customer onboarding, and data integration.</p></div>
+            <div class="card"><h3>🌾 Agriculture & Agribusiness</h3><p>Automating yield tracking, supplier data collection, and export paperwork.</p></div>
+            <div class="card"><h3>🏨 Tourism & Hospitality</h3><p>Automating booking management, customer feedback responses, and staff scheduling.</p></div>
+            <div class="card"><h3>🏠 Real Estate & Property</h3><p>Automating lead qualification, lease document processing, and property listing updates.</p></div>
         </div>
     </div>
 
     <!-- SERVICES -->
-    <div id="services" style="padding: 40px 0; background: #F7F9FA;">
+    <div id="services" style="padding: 60px 0; background: #F7F9FA;">
         <h2 class="section-title">Our Core Services</h2>
         <div class="cards-grid">
-            <div class="card"><h3>1. Custom AI Agents (RAG & LLMs)</h3><p>Bespoke AI agents built on retrieval-augmented generation and large language models.</p></div>
-            <div class="card"><h3>2. Enterprise Data Scraping & Lead Intelligence</h3><p>Automated data collection and lead intelligence pipelines.</p></div>
-            <div class="card"><h3>3. Intelligent Document Automation</h3><p>End-to-end automation of document capture, processing, and filing.</p></div>
-            <div class="card"><h3>4. Workflow Orchestration & API Integration (n8n)</h3><p>Connects existing systems and automates cross-platform workflows.</p></div>
-            <div class="card"><h3>5. AI Voice Agents & WhatsApp Automation</h3><p>24/7 automated customer engagement via voice and WhatsApp.</p></div>
-            <div class="card"><h3>6. Predictive Analytics & Executive Dashboards</h3><p>Real-time dashboards and forecasting for executive decision-making.</p></div>
-            <div class="card"><h3>7. Browser & Web Automation (Playwright)</h3><p>Automates repetitive browser-based tasks and workflows.</p></div>
-            <div class="card"><h3>8. Custom Software Development (Python, FastAPI)</h3><p>Bespoke software built to fit specific operational needs.</p></div>
+            <div class="card"><h3>🧠 1. Custom AI Agents (RAG & LLMs)</h3><p>Bespoke AI agents built on retrieval-augmented generation and large language models.</p></div>
+            <div class="card"><h3>🔍 2. Enterprise Data Scraping & Lead Intelligence</h3><p>Automated data collection and lead intelligence pipelines.</p></div>
+            <div class="card"><h3>📄 3. Intelligent Document Automation</h3><p>End-to-end automation of document capture, processing, and filing.</p></div>
+            <div class="card"><h3>⚙️ 4. Workflow Orchestration & API Integration (n8n)</h3><p>Connects existing systems and automates cross-platform workflows.</p></div>
+            <div class="card"><h3>🎙️ 5. AI Voice Agents & WhatsApp Automation</h3><p>24/7 automated customer engagement via voice and WhatsApp.</p></div>
+            <div class="card"><h3>📊 6. Predictive Analytics & Executive Dashboards</h3><p>Real-time dashboards and forecasting for executive decision-making.</p></div>
+            <div class="card"><h3>🌐 7. Browser & Web Automation (Playwright)</h3><p>Automates repetitive browser-based tasks and workflows.</p></div>
+            <div class="card"><h3>🚀 8. Custom Software Development (Python, FastAPI)</h3><p>Bespoke software built to fit specific operational needs.</p></div>
         </div>
     </div>
 
     <!-- STACK -->
-    <div id="stack" style="padding: 40px 0; background: #FFFFFF;">
+    <div id="stack" style="padding: 60px 0; background: #FFFFFF;">
         <h2 class="section-title">The Vuka Automation Stack</h2>
         <table class="stack-table">
             <tr><th>Area</th><th>Tool</th></tr>
-            <tr><td>Programming</td><td>Python</td></tr>
-            <tr><td>AI</td><td>LLMs / AI APIs</td></tr>
-            <tr><td>Automation</td><td>n8n</td></tr>
-            <tr><td>Data</td><td>Web scraping</td></tr>
-            <tr><td>Database</td><td>Supabase / PostgreSQL</td></tr>
-            <tr><td>APIs</td><td>FastAPI</td></tr>
-            <tr><td>Browser automation</td><td>Playwright</td></tr>
-            <tr><td>Infrastructure</td><td>Docker</td></tr>
-            <tr><td>Local AI</td><td>Ollama</td></tr>
-            <tr><td>Authentication</td><td>Supabase Auth</td></tr>
-            <tr><td>Dashboards</td><td>Streamlit</td></tr>
-            <tr><td>APIs/Webhooks</td><td>REST + Webhooks</td></tr>
-            <tr><td>AI knowledge</td><td>RAG + vector databases</td></tr>
-            <tr><td>Messaging</td><td>WhatsApp APIs</td></tr>
-            <tr><td>Payments</td><td>Payment APIs</td></tr>
-            <tr><td>Email</td><td>Email APIs</td></tr>
+            <tr><td>🐍 Programming</td><td>Python</td></tr>
+            <tr><td>🤖 AI</td><td>LLMs / AI APIs</td></tr>
+            <tr><td>⚙️ Automation</td><td>n8n</td></tr>
+            <tr><td>🌐 Data</td><td>Web scraping</td></tr>
+            <tr><td>🗄️ Database</td><td>Supabase / PostgreSQL</td></tr>
+            <tr><td>🚀 APIs</td><td>FastAPI</td></tr>
+            <tr><td>🌎 Browser automation</td><td>Playwright</td></tr>
+            <tr><td>🐳 Infrastructure</td><td>Docker</td></tr>
+            <tr><td>🧠 Local AI</td><td>Ollama</td></tr>
+            <tr><td>🔐 Authentication</td><td>Supabase Auth</td></tr>
+            <tr><td>📊 Dashboards</td><td>Streamlit</td></tr>
+            <tr><td>🔗 APIs/Webhooks</td><td>REST + Webhooks</td></tr>
+            <tr><td>🔍 AI knowledge</td><td>RAG + vector databases</td></tr>
+            <tr><td>💬 Messaging</td><td>WhatsApp APIs</td></tr>
+            <tr><td>💳 Payments</td><td>Payment APIs</td></tr>
+            <tr><td>📧 Email</td><td>Email APIs</td></tr>
         </table>
     </div>
 
     <!-- SOLUTIONS -->
-    <div style="padding: 40px 0; background: #F7F9FA;">
+    <div style="padding: 60px 0; background: #F7F9FA;">
         <h2 class="section-title">Solutions for Modern Business</h2>
         <div class="cards-grid">
-            <div class="card"><h3>Digital Workforce Expansion</h3><p>Scale operations without linear hiring.</p></div>
-            <div class="card"><h3>Zero Data Entry</h3><p>Eliminate manual capture and reduce errors.</p></div>
-            <div class="card"><h3>24/7 Customer Engagement</h3><p>AI agents respond instantly, anytime.</p></div>
-            <div class="card"><h3>Unified Business Systems</h3><p>Connect apps, data, and teams seamlessly.</p></div>
-            <div class="card"><h3>Predictive Operations</h3><p>Forecast trends and act before problems arise.</p></div>
-            <div class="card"><h3>Total Transparency</h3><p>Real-time dashboards. Real answers.</p></div>
-            <div class="card"><h3>Intelligence Automation</h3><p>AI that learns, reasons, and drives decisions.</p></div>
-            <div class="card"><h3>Supply Chain Optimization</h3><p>Resilient, visible, and always-on supply chains.</p></div>
+            <div class="card"><h3>👥 Digital Workforce Expansion</h3><p>Scale operations without linear hiring.</p></div>
+            <div class="card"><h3>🗂️ Zero Data Entry</h3><p>Eliminate manual capture and reduce errors.</p></div>
+            <div class="card"><h3>💬 24/7 Customer Engagement</h3><p>AI agents respond instantly, anytime.</p></div>
+            <div class="card"><h3>🔗 Unified Business Systems</h3><p>Connect apps, data, and teams seamlessly.</p></div>
+            <div class="card"><h3>📈 Predictive Operations</h3><p>Forecast trends and act before problems arise.</p></div>
+            <div class="card"><h3>👁️ Total Transparency</h3><p>Real-time dashboards. Real answers.</p></div>
+            <div class="card"><h3>🧠 Intelligence Automation</h3><p>AI that learns, reasons, and drives decisions.</p></div>
+            <div class="card"><h3>📦 Supply Chain Optimization</h3><p>Resilient, visible, and always-on supply chains.</p></div>
         </div>
     </div>
 
