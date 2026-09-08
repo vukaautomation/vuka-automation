@@ -11,9 +11,11 @@
         
         /* NAV */
         nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background-color: var(--bg-primary); border-bottom: 1px solid rgba(255,255,255,0.1); position: sticky; top: 0; z-index: 1000; }
-        .logo img { height: 200px; max-width: 100%; object-fit: contain; }
+        /* HUGE LOGO */
+        .logo img { height: 250px; max-width: 100%; object-fit: contain; }
         .nav-links a { color: var(--text-main); text-decoration: none; font-weight: 600; margin-left: 20px; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; }
         .nav-links a:hover { color: var(--accent); }
+        /* ORANGE NAV BUTTON */
         .nav-cta { background-color: var(--orange); color: #fff; padding: 10px 20px; border-radius: 50px; text-decoration: none; font-weight: 600; }
         .nav-cta:hover { background-color: #fff; color: var(--bg-primary); }
 
@@ -22,9 +24,11 @@
         .hero h1 { font-size: 4rem; line-height: 1.1; margin-bottom: 20px; }
         .hero h1 span { color: var(--accent); }
         .hero p { color: var(--text-body); font-size: 1.2rem; margin-bottom: 30px; }
+        /* ORANGE HERO BUTTON */
         .cta-button { background-color: var(--orange); color: white; padding: 18px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; transition: transform 0.3s; }
         .cta-button:hover { transform: translateY(-3px); background-color: #fff; color: var(--bg-primary); }
-        .hero-graphic { height: 400px; border-radius: 20px; background-image: url('brain.png'); background-size: cover; background-position: center; }
+        /* Uses brain.jpg now to match your upload! */
+        .hero-graphic { height: 500px; border-radius: 20px; background-image: url('brain.jpg'); background-size: cover; background-position: center; }
 
         /* SECTIONS */
         .section { padding: 80px 40px; max-width: 1200px; margin: 0 auto; }
@@ -57,7 +61,8 @@
             .hero h1 { font-size: 3rem; }
             .grid-3, .grid-4 { grid-template-columns: 1fr; }
             .contact-section { grid-template-columns: 1fr; }
-            .logo img { height: 120px; }
+            /* Keep the logo big on mobile too! */
+            .logo img { height: 150px; }
         }
     </style>
 </head>
