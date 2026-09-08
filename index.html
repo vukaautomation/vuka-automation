@@ -3,74 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vuka Automation</title>
+    <title>Vuka Automation | Enterprise AI Systems Integrator</title>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body { margin: 0; font-family: 'Space Grotesk', sans-serif; background-color: #0f111a; color: white; }
+        body { margin: 0; font-family: 'Space Grotesk', sans-serif; background-color: #FFFFFF; color: #0B1F3A; line-height: 1.6; }
         
-        /* Navbar */
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background-color: #0f111a; border-bottom: 1px solid #222; }
-        .nav-links a { color: #aaa; text-decoration: none; margin-left: 20px; }
+        /* NAVBAR */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background-color: #FFFFFF; border-bottom: 2px solid #0B1F3A; }
+        .logo img { height: 60px; }
+        .nav-links a { color: #0B1F3A; text-decoration: none; margin-left: 20px; font-weight: bold; }
         .nav-links a:hover { color: #00A6A6; }
 
-        /* Hero Section with Centered Logo */
-        .hero { text-align: center; padding: 120px 20px; }
-        .hero img { width: 180px; margin-bottom: 20px; }
-        .hero h1 { font-size: 3.5rem; margin: 0; background: linear-gradient(90deg, #00A6A6, #FF6B35); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .hero p { color: #ccc; font-size: 1.2rem; margin-top: 20px; max-width: 700px; margin-left: auto; margin-right: auto; }
+        /* HERO */
+        .hero { text-align: center; padding: 60px 20px; }
+        .hero h1 { font-size: 3.2rem; margin: 0; color: #0B1F3A; }
+        .hero h1 span { color: #00A6A6; }
+        .hero p { color: #333333; font-size: 1.1rem; max-width: 800px; margin: 20px auto; }
+        .cta-button { display: inline-block; background: #00A6A6; color: white; padding: 16px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; margin-top: 20px; }
+        .cta-button:hover { background: #0B1F3A; }
 
-        /* Services Section */
-        .services { max-width: 1000px; margin: 80px auto; padding: 0 20px; }
-        .service-card { background: #1a1d29; border: 1px solid #333; border-radius: 12px; padding: 30px; margin-bottom: 20px; }
-        .service-card h3 { margin-top: 0; color: #00A6A6; }
+        /* SECTIONS */
+        .section-title { text-align: center; font-size: 2.2rem; color: #0B1F3A; margin-bottom: 40px; }
 
-        /* CTA Button */
-        .cta-button { display: inline-block; background: #FF6B35; color: white; padding: 15px 30px; border-radius: 5px; text-decoration: none; font-weight: bold; margin-top: 30px; }
+        /* CARDS */
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .card { background: #F7F9FA; border: 1px solid #E0E0E0; border-radius: 8px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .card h3 { color: #0B1F3A; margin-top: 0; font-size: 1.2rem; }
+        .card p { color: #555555; font-size: 0.95rem; }
 
-        footer { text-align: center; padding: 40px; color: #888; border-top: 1px solid #222; }
+        /* STACK TABLE */
+        .stack-table { max-width: 800px; margin: 0 auto; border-collapse: collapse; width: 100%; }
+        .stack-table th, .stack-table td { border: 1px solid #DDD; padding: 12px; text-align: left; }
+        .stack-table th { background-color: #0B1F3A; color: white; }
+        .stack-table tr:nth-child(even) { background-color: #F7F9FA; }
+
+        /* CONTACT */
+        .contact-section { background: #0B1F3A; color: white; padding: 60px 20px; text-align: center; }
+        .contact-section h2 { color: #00A6A6; font-size: 2.2rem; }
+        .form-container { max-width: 600px; margin: 0 auto; display: grid; gap: 15px; text-align: left; }
+        .form-container input, .form-container textarea { width: 100%; padding: 15px; border-radius: 5px; border: none; font-family: inherit; }
+        .form-container button { background: #00A6A6; color: white; border: none; padding: 15px; border-radius: 5px; font-weight: bold; cursor: pointer; }
+
+        /* FOOTER */
+        footer { background: #0B1F3A; text-align: center; padding: 30px; color: #FFFFFF; border-top: 5px solid #00A6A6; }
+        .socials a { color: #00A6A6; text-decoration: none; margin: 0 10px; }
     </style>
 </head>
 <body>
     <nav>
         <div class="logo">
-            <!-- REPLACE 'logo.png' WITH YOUR ACTUAL LOGO FILE NAME -->
-            <img src="logo.png" alt="Vuka Automation" style="height: 40px;">
+            <img src="logo.png" alt="Vuka Automation">
         </div>
         <div class="nav-links">
+            <a href="#industries">Industries</a>
             <a href="#services">Services</a>
+            <a href="#stack">Stack</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
 
+    <!-- HERO -->
     <div class="hero">
-        <!-- If this image is broken, delete this line -->
-        <img src="logo.png" alt="Vuka Automation">
-        <h1>Automation That Awakens Growth</h1>
-        <p>We build intelligent AI systems that eliminate manual admin, streamline operations, and unlock untapped revenue for modern businesses.</p>
-        <a href="https://wa.me/27YOURNUMBER" class="cta-button">Book a Free Call</a>
+        <h1>Automation That <span>Awakens Growth</span></h1>
+        <p>We are a Pretoria-based Enterprise AI Systems Integrator that builds custom intelligence systems for large organizations across South Africa. We eliminate manual admin, automate complex workflows, and unlock scalable growth with AI and intelligent automation.</p>
+        <a href="https://wa.me/27714443601" class="cta-button">Book a Free Call</a>
     </div>
 
-    <div class="services" id="services">
-        <h2 style="text-align: center;">Our Core Services</h2>
-        
-        <div class="service-card">
-            <h3>🔍 Lead Generation & Market Intelligence</h3>
-            <p>Custom data scraping to find your exact target clients. Weekly "Lead Engine" reports delivered to your inbox.</p>
+    <!-- INDUSTRIES -->
+    <div id="industries" style="padding: 40px 0; background: #FFFFFF;">
+        <h2 class="section-title">Industries We Serve</h2>
+        <div class="cards-grid">
+            <div class="card"><h3>Mining & Energy</h3><p>Automating compliance reports, safety data entry, and equipment monitoring.</p></div>
+            <div class="card"><h3>Retail & Wholesale</h3><p>Automating inventory management, stock forecasting, and supplier communications.</p></div>
+            <div class="card"><h3>Logistics & E-Commerce</h3><p>Automating fleet route planning, order tracking, and dispatch workflows.</p></div>
+            <div class="card"><h3>Financial Services & Banking</h3><p>Automating sensitive document processing, KYC checks, and client onboarding.</p></div>
+            <div class="card"><h3>Manufacturing</h3><p>Automating quality control logs, invoice processing, and supply chain alerts.</p></div>
+            <div class="card"><h3>Telecommunications & ICT</h3><p>Automating network ticket routing, customer onboarding, and data integration.</p></div>
+            <div class="card"><h3>Agriculture & Agribusiness</h3><p>Automating yield tracking, supplier data collection, and export paperwork.</p></div>
+            <div class="card"><h3>Tourism & Hospitality</h3><p>Automating booking management, customer feedback responses, and staff scheduling.</p></div>
+            <div class="card"><h3>Real Estate & Property</h3><p>Automating lead qualification, lease document processing, and property listing updates.</p></div>
         </div>
+    </div>
 
-        <div class="service-card">
-            <h3>🤖 AI Chatbots & Communication</h3>
-            <p>24/7 WhatsApp and web chatbots that answer questions, qualify leads, and book appointments.</p>
+    <!-- SERVICES -->
+    <div id="services" style="padding: 40px 0; background: #F7F9FA;">
+        <h2 class="section-title">Our Core Services</h2>
+        <div class="cards-grid">
+            <div class="card"><h3>1. Custom AI Agents (RAG & LLMs)</h3><p>Bespoke AI agents built on retrieval-augmented generation and large language models.</p></div>
+            <div class="card"><h3>2. Enterprise Data Scraping & Lead Intelligence</h3><p>Automated data collection and lead intelligence pipelines.</p></div>
+            <div class="card"><h3>3. Intelligent Document Automation</h3><p>End-to-end automation of document capture, processing, and filing.</p></div>
+            <div class="card"><h3>4. Workflow Orchestration & API Integration (n8n)</h3><p>Connects existing systems and automates cross-platform workflows.</p></div>
+            <div class="card"><h3>5. AI Voice Agents & WhatsApp Automation</h3><p>24/7 automated customer engagement via voice and WhatsApp.</p></div>
+            <div class="card"><h3>6. Predictive Analytics & Executive Dashboards</h3><p>Real-time dashboards and forecasting for executive decision-making.</p></div>
+            <div class="card"><h3>7. Browser & Web Automation (Playwright)</h3><p>Automates repetitive browser-based tasks and workflows.</p></div>
+            <div class="card"><h3>8. Custom Software Development (Python, FastAPI)</h3><p>Bespoke software built to fit specific operational needs.</p></div>
         </div>
+    </div>
 
-        <div class="service-card">
-            <h3>⚙️ Workflow Automation (n8n)</h3>
-            <p>Connect your business tools so data flows automatically. Automate invoices, follow-ups, and reports.</p>
+    <!-- STACK -->
+    <div id="stack" style="padding: 40px 0; background: #FFFFFF;">
+        <h2 class="section-title">The Vuka Automation Stack</h2>
+        <table class="stack-table">
+            <tr><th>Area</th><th>Tool</th></tr>
+            <tr><td>Programming</td><td>Python</td></tr>
+            <tr><td>AI</td><td>LLMs / AI APIs</td></tr>
+            <tr><td>Automation</td><td>n8n</td></tr>
+            <tr><td>Data</td><td>Web scraping</td></tr>
+            <tr><td>Database</td><td>Supabase / PostgreSQL</td></tr>
+            <tr><td>APIs</td><td>FastAPI</td></tr>
+            <tr><td>Browser automation</td><td>Playwright</td></tr>
+            <tr><td>Infrastructure</td><td>Docker</td></tr>
+            <tr><td>Local AI</td><td>Ollama</td></tr>
+            <tr><td>Authentication</td><td>Supabase Auth</td></tr>
+            <tr><td>Dashboards</td><td>Streamlit</td></tr>
+            <tr><td>APIs/Webhooks</td><td>REST + Webhooks</td></tr>
+            <tr><td>AI knowledge</td><td>RAG + vector databases</td></tr>
+            <tr><td>Messaging</td><td>WhatsApp APIs</td></tr>
+            <tr><td>Payments</td><td>Payment APIs</td></tr>
+            <tr><td>Email</td><td>Email APIs</td></tr>
+        </table>
+    </div>
+
+    <!-- SOLUTIONS -->
+    <div style="padding: 40px 0; background: #F7F9FA;">
+        <h2 class="section-title">Solutions for Modern Business</h2>
+        <div class="cards-grid">
+            <div class="card"><h3>Digital Workforce Expansion</h3><p>Scale operations without linear hiring.</p></div>
+            <div class="card"><h3>Zero Data Entry</h3><p>Eliminate manual capture and reduce errors.</p></div>
+            <div class="card"><h3>24/7 Customer Engagement</h3><p>AI agents respond instantly, anytime.</p></div>
+            <div class="card"><h3>Unified Business Systems</h3><p>Connect apps, data, and teams seamlessly.</p></div>
+            <div class="card"><h3>Predictive Operations</h3><p>Forecast trends and act before problems arise.</p></div>
+            <div class="card"><h3>Total Transparency</h3><p>Real-time dashboards. Real answers.</p></div>
+            <div class="card"><h3>Intelligence Automation</h3><p>AI that learns, reasons, and drives decisions.</p></div>
+            <div class="card"><h3>Supply Chain Optimization</h3><p>Resilient, visible, and always-on supply chains.</p></div>
+        </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div id="contact" class="contact-section">
+        <h2>Get in Touch</h2>
+        <p>Let's build intelligence systems that drive real business impact.</p>
+        <div class="form-container">
+            <input type="text" placeholder="Full Name">
+            <input type="email" placeholder="Email">
+            <input type="tel" placeholder="Phone Number">
+            <input type="text" placeholder="Company Name">
+            <textarea rows="4" placeholder="Short Message"></textarea>
+            <button onclick="window.location.href='https://wa.me/27714443601'">Send Message</button>
+        </div>
+        <div style="margin-top: 30px;">
+            <p>Email: vukaautomation@gmail.com</p>
+            <p>WhatsApp: +27 71 444 3601</p>
+            <p>Location: Pretoria, South Africa</p>
         </div>
     </div>
 
     <footer>
-        <p>© 2026 Vuka Automation. Based in Pretoria, South Africa.</p>
+        <p>© 2026 Vuka Automation. Proudly South African.</p>
+        <div class="socials">
+            <a href="https://www.linkedin.com/in/vuka-automation-1631b0435">LinkedIn</a> |
+            <a href="https://facebook.com/vukaautomation">Facebook</a> |
+            <a href="https://instagram.com/vuka.automation2">Instagram</a> |
+            <a href="https://tiktok.com/@vuka.automation2">TikTok</a>
+        </div>
     </footer>
 </body>
 </html>
