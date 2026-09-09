@@ -19,7 +19,7 @@
         .nav-cta { background-color: var(--orange); color: #fff; padding: 12px 24px; border-radius: 50px; text-decoration: none; font-weight: 600; }
         .nav-cta:hover { background-color: #fff; color: var(--bg-primary); }
 
-        /* HERO - NO DUPLICATE BUTTON */
+        /* HERO */
         .hero { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; padding: 80px 40px; align-items: center; background: radial-gradient(circle at 100% 0%, #031233 0%, #00214E 60%); }
         .hero h1 { font-family: 'Space Grotesk', sans-serif; font-size: 4rem; line-height: 1.1; margin-bottom: 20px; color: #fff; }
         .hero h1 span { color: var(--accent); }
@@ -37,14 +37,14 @@
         .industry-item h3 { font-size: 1.2rem; margin: 0 0 5px 0; color: #fff; }
         .industry-item p { color: var(--text-body); margin: 0; font-size: 0.95rem; }
 
-        /* SERVICES - DARK CARDS */
+        /* SERVICES - COMPACT HORIZONTAL */
         .services-list { max-width: 800px; margin: 0 auto; }
-        .service-row { display: flex; align-items: center; gap: 20px; padding: 30px; background: var(--bg-dark); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; margin-bottom: 20px; transition: 0.3s; }
-        .service-row:hover { border-color: var(--accent); }
-        .service-icon { color: var(--accent); font-family: 'Space Grotesk', sans-serif; font-size: 3rem; font-weight: 700; width: 50px; text-align: center; }
+        .service-row { display: flex; align-items: center; gap: 15px; padding: 15px 20px; background: var(--bg-dark); border: 1px solid rgba(0, 212, 255, 0.4); border-radius: 12px; margin-bottom: 15px; transition: 0.3s; }
+        .service-row:hover { border-color: var(--accent); transform: translateY(-2px); }
+        .service-icon { font-size: 2rem; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; background: rgba(0, 212, 255, 0.1); border-radius: 10px; }
         .service-text { display: flex; flex-direction: column; }
-        .service-title { font-size: 1.8rem; font-weight: 700; color: #fff; font-family: 'Space Grotesk', sans-serif; }
-        .service-subtitle { font-size: 1rem; color: var(--text-body); margin-top: 5px; }
+        .service-title { font-size: 1.3rem; font-weight: 700; color: #fff; font-family: 'Space Grotesk', sans-serif; }
+        .service-subtitle { font-size: 0.95rem; color: var(--text-body); margin-top: 2px; }
         
         /* SHOWCASE IMAGES */
         .image-showcase { text-align: center; }
@@ -57,7 +57,7 @@
         .step-content h3 { margin: 0 0 5px 0; color: #fff; font-size: 1.4rem; }
         .step-content p { color: var(--text-body); margin: 0; font-size: 0.95rem; }
 
-        /* STACK SECTION - CLEAN NAVY */
+        /* STACK SECTION */
         .stack-section { background-color: #0A1F44; padding: 80px 40px; }
         .stack-header { color: #FFFFFF; font-family: 'Space Grotesk', sans-serif; font-size: 3rem; margin-bottom: 50px; text-align: center; }
         .stack-wrapper { max-width: 900px; margin: 0 auto; }
@@ -94,7 +94,6 @@
             .grid-3 { grid-template-columns: 1fr; }
             .contact-section { grid-template-columns: 1fr; }
             .logo img { height: 80px; }
-            .service-row { flex-direction: column; text-align: center; }
             .stack-header { font-size: 2rem; }
             .stack-row { flex-direction: column; align-items: flex-start; gap: 15px; }
             .technology-pill { width: 100%; text-align: center; }
@@ -110,7 +109,6 @@
             <a href="#stack">Stack</a>
             <a href="#contact">Contact</a>
         </div>
-        <!-- ONLY ONE BUTTON HERE -->
         <a href="https://wa.me/27714443601" class="nav-cta">Book a Free Call</a>
     </nav>
 
@@ -137,17 +135,18 @@
         </div>
     </div>
 
+    <!-- SERVICES - COMPACT VERSION -->
     <div class="section" id="services">
         <h2 class="section-title">Our Core Services</h2>
         <div class="services-list">
-            <div class="service-row"><div class="service-icon">V</div><div class="service-text"><div class="service-title">AI Agents</div><div class="service-subtitle">24/7 custom agents</div></div></div>
-            <div class="service-row"><div class="service-icon">V</div><div class="service-text"><div class="service-title">Data Automation</div><div class="service-subtitle">No more manual entry</div></div></div>
-            <div class="service-row"><div class="service-icon">V</div><div class="service-text"><div class="service-title">Systems Integration</div><div class="service-subtitle">n8n, APIs, dashboards</div></div></div>
-            <div class="service-row"><div class="service-icon">V</div><div class="service-text"><div class="service-title">Document Processing</div><div class="service-subtitle">Invoices, contracts, compliance</div></div></div>
-            <div class="service-row"><div class="service-icon">V</div><div class="service-text"><div class="service-title">Lead Intelligence</div><div class="service-subtitle">Find your next big client</div></div></div>
-            <div class="service-row"><div class="service-icon">V</div><div class="service-text"><div class="service-title">Predictive Dashboards</div><div class="service-subtitle">Real-time executive insights</div></div></div>
-            <div class="service-row"><div class="service-icon">V</div><div class="service-text"><div class="service-title">Web Automation</div><div class="service-subtitle">Playwright</div></div></div>
-            <div class="service-row"><div class="service-icon">V</div><div class="service-text"><div class="service-title">Custom Development</div><div class="service-subtitle">Python & FastAPI</div></div></div>
+            <div class="service-row"><div class="service-icon">🛜</div><div class="service-text"><div class="service-title">AI Agents</div><div class="service-subtitle">24/7 custom agents</div></div></div>
+            <div class="service-row"><div class="service-icon">📈</div><div class="service-text"><div class="service-title">Data Automation</div><div class="service-subtitle">No more manual entry</div></div></div>
+            <div class="service-row"><div class="service-icon">🔗</div><div class="service-text"><div class="service-title">Systems Integration</div><div class="service-subtitle">n8n, APIs, dashboards</div></div></div>
+            <div class="service-row"><div class="service-icon">📄</div><div class="service-text"><div class="service-title">Document Processing</div><div class="service-subtitle">Invoices, contracts, compliance</div></div></div>
+            <div class="service-row"><div class="service-icon">🔍</div><div class="service-text"><div class="service-title">Lead Intelligence</div><div class="service-subtitle">Find your next big client</div></div></div>
+            <div class="service-row"><div class="service-icon">📊</div><div class="service-text"><div class="service-title">Predictive Dashboards</div><div class="service-subtitle">Real-time executive insights</div></div></div>
+            <div class="service-row"><div class="service-icon">🌐</div><div class="service-text"><div class="service-title">Web Automation</div><div class="service-subtitle">Playwright</div></div></div>
+            <div class="service-row"><div class="service-icon">🚀</div><div class="service-text"><div class="service-title">Custom Development</div><div class="service-subtitle">Python & FastAPI</div></div></div>
         </div>
     </div>
 
@@ -157,26 +156,26 @@
         <img src="dashboard.jpg" alt="Vuka Automation Dashboard">
     </div>
 
-    <!-- CLEAN STACK SECTION -->
+    <!-- STACK SECTION -->
     <div class="stack-section" id="stack">
         <h2 class="stack-header">VUKA AUTOMATION STACK</h2>
         <div class="stack-wrapper">
-            <div class="stack-row"><div class="capability">Custom Development</div><div class="technology-pill">Python</div></div>
-            <div class="stack-row"><div class="capability">Enterprise AI</div><div class="technology-pill">LLMs / AI APIs</div></div>
-            <div class="stack-row"><div class="capability">Workflow Automation</div><div class="technology-pill">n8n</div></div>
-            <div class="stack-row"><div class="capability">Lead Intelligence</div><div class="technology-pill">Web scraping</div></div>
-            <div class="stack-row"><div class="capability">Database</div><div class="technology-pill">Supabase / PostgreSQL</div></div>
-            <div class="stack-row"><div class="capability">APIs</div><div class="technology-pill">FastAPI</div></div>
-            <div class="stack-row"><div class="capability">Browser Automation</div><div class="technology-pill">Playwright</div></div>
-            <div class="stack-row"><div class="capability">Infrastructure</div><div class="technology-pill">Docker</div></div>
-            <div class="stack-row"><div class="capability">Local AI</div><div class="technology-pill">Ollama</div></div>
-            <div class="stack-row"><div class="capability">Authentication</div><div class="technology-pill">Supabase Auth</div></div>
-            <div class="stack-row"><div class="capability">Dashboards</div><div class="technology-pill">Streamlit</div></div>
-            <div class="stack-row"><div class="capability">APIs & Webhooks</div><div class="technology-pill">REST + Webhooks</div></div>
-            <div class="stack-row"><div class="capability">AI Knowledge</div><div class="technology-pill">RAG + Vector Databases</div></div>
-            <div class="stack-row"><div class="capability">Messaging</div><div class="technology-pill">WhatsApp APIs</div></div>
-            <div class="stack-row"><div class="capability">Payments</div><div class="technology-pill">Payment APIs</div></div>
-            <div class="stack-row"><div class="capability">Email</div><div class="technology-pill">Email APIs</div></div>
+            <div class="stack-row"><div class="capability">🐍 Custom Development</div><div class="technology-pill">Python</div></div>
+            <div class="stack-row"><div class="capability">🤖 Enterprise AI</div><div class="technology-pill">LLMs / AI APIs</div></div>
+            <div class="stack-row"><div class="capability">⚙️ Workflow Automation</div><div class="technology-pill">n8n</div></div>
+            <div class="stack-row"><div class="capability">🌐 Lead Intelligence</div><div class="technology-pill">Web scraping</div></div>
+            <div class="stack-row"><div class="capability">🗄️ Database</div><div class="technology-pill">Supabase / PostgreSQL</div></div>
+            <div class="stack-row"><div class="capability">🚀 APIs</div><div class="technology-pill">FastAPI</div></div>
+            <div class="stack-row"><div class="capability">🌎 Browser Automation</div><div class="technology-pill">Playwright</div></div>
+            <div class="stack-row"><div class="capability">🐳 Infrastructure</div><div class="technology-pill">Docker</div></div>
+            <div class="stack-row"><div class="capability">🧠 Local AI</div><div class="technology-pill">Ollama</div></div>
+            <div class="stack-row"><div class="capability">🔐 Authentication</div><div class="technology-pill">Supabase Auth</div></div>
+            <div class="stack-row"><div class="capability">📊 Dashboards</div><div class="technology-pill">Streamlit</div></div>
+            <div class="stack-row"><div class="capability">🔗 APIs & Webhooks</div><div class="technology-pill">REST + Webhooks</div></div>
+            <div class="stack-row"><div class="capability">🔍 AI Knowledge</div><div class="technology-pill">RAG + Vector Databases</div></div>
+            <div class="stack-row"><div class="capability">💬 Messaging</div><div class="technology-pill">WhatsApp APIs</div></div>
+            <div class="stack-row"><div class="capability">💳 Payments</div><div class="technology-pill">Payment APIs</div></div>
+            <div class="stack-row"><div class="capability">📧 Email</div><div class="technology-pill">Email APIs</div></div>
         </div>
     </div>
 
