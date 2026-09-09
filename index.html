@@ -4,50 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vuka Automation | Enterprise AI Systems Integrator</title>
+    <meta name="description" content="Vuka Automation is a Pretoria-based Enterprise AI Systems Integrator building custom intelligence systems for large organizations.">
+    <link rel="icon" type="image/png" href="logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         :root { --bg-primary: #00214E; --bg-dark: #031233; --accent: #00BAC5; --orange: #FF6B35; --text-main: #FFFFFF; --text-body: #A9B7C6; }
-        body { font-family: 'Inter', sans-serif; background-color: var(--bg-primary); color: var(--text-main); margin: 0; line-height: 1.6; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-primary); color: var(--text-main); margin: 0; line-height: 1.6; font-size: 16px; }
         
-        /* NAV - REDUCED SIZE */
+        /* NAV */
         nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 40px; background-color: var(--bg-primary); border-bottom: 1px solid rgba(255,255,255,0.1); position: sticky; top: 0; z-index: 1000; }
-        /* LOGO - PERFECT SIZE */
-        .logo img { height: 140px; max-width: 100%; object-fit: contain; }
+        /* WHITE LOGO (The Fix) */
+        .logo img { height: 140px; max-width: 100%; object-fit: contain; filter: brightness(0) invert(1); }
         .nav-links a { color: var(--text-main); text-decoration: none; font-weight: 600; margin-left: 20px; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; }
         .nav-links a:hover { color: var(--accent); }
         .nav-cta { background-color: #FF6B35; color: #fff; padding: 10px 20px; border-radius: 50px; text-decoration: none; font-weight: 600; }
         .nav-cta:hover { background-color: #fff; color: var(--bg-primary); }
 
-        /* HERO - REDUCED PADDING */
+        /* HERO - REMOVE DUP BUTTON */
         .hero { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; padding: 60px 40px; align-items: center; background: radial-gradient(circle at 100% 0%, #031233 0%, #00214E 60%); }
         .hero h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; }
         .hero h1 span { color: var(--accent); }
-        .hero p { color: var(--text-body); font-size: 1.1rem; margin-bottom: 30px; }
+        .hero p { color: var(--text-body); font-size: 1.2rem; margin-bottom: 30px; }
         .cta-button { background-color: #FF6B35; color: white; padding: 16px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; transition: transform 0.3s; }
         .cta-button:hover { transform: translateY(-3px); background-color: #fff; color: var(--bg-primary); }
-        /* REDUCED BRAIN HEIGHT */
-        .hero-graphic { height: 400px; border-radius: 20px; background-image: url('brain.jpg'); background-size: cover; background-position: center; }
+        /* HERO GRAPHIC - 2X BIGGER */
+        .hero-graphic-container { position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+        .hero-graphic { width: 100%; height: 500px; border-radius: 20px; background-image: url('brain.jpg'); background-size: cover; background-position: center; }
+        .graphic-label { color: var(--accent); text-transform: uppercase; letter-spacing: 2px; font-weight: 800; margin-bottom: 15px; font-size: 1.2rem; }
 
         /* SECTIONS */
         .section { padding: 60px 40px; max-width: 1200px; margin: 0 auto; }
         .section-title { font-size: 2.5rem; margin: 0 0 30px 0; }
         .section-title::before { content: ''; display: inline-block; width: 15px; height: 15px; border-radius: 50%; background-color: var(--accent); margin-right: 10px; }
 
+        /* CARDS - GLASS EFFECT */
         .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
         .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-        .card { background-color: var(--bg-dark); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 30px; transition: 0.3s; }
+        .card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 12px; padding: 30px; transition: 0.3s; }
         .card:hover { border-color: var(--accent); transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0, 186, 197, 0.2); }
-        .card h3 { font-size: 1.2rem; margin: 0 0 10px 0; color: #fff; }
-        .card p { color: var(--text-body); font-size: 0.95rem; margin: 0; }
+        .card h3 { font-size: 1.3rem; margin: 0 0 10px 0; color: #fff; }
+        .card p { color: var(--text-body); font-size: 16px; line-height: 1.6; margin: 0; }
 
+        /* SOLUTIONS - WHITE TEXT + ORANGE ICON BG */
+        .solution-icon { width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; font-size: 24px; border-radius: 10px; background: rgba(255,107,53,0.15); margin-bottom: 15px; }
+        .card-white h3 { color: #fff !important; }
+
+        /* HOW WE WORK - ORANGE NUMBERS & LINE */
+        .how-work { border-left: 2px solid rgba(255,255,255,0.12); margin-left: 20px; padding-left: 30px; }
+        .step { margin-bottom: 30px; position: relative; }
+        .step::before { content: ''; position: absolute; left: -36px; top: 5px; width: 10px; height: 10px; border-radius: 50%; background: var(--orange); }
+        .step-title { font-size: 1.5rem; font-weight: 800; color: #fff; margin-bottom: 10px; }
+        .step-title span { color: var(--orange); margin-right: 10px; }
+
+        /* STACK TABLE - CLIENT FRIENDLY */
         .stack-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
         .stack-table th, .stack-table td { border-bottom: 1px solid rgba(255,255,255,0.1); padding: 15px; text-align: left; color: var(--text-body); font-size: 1.1rem; }
         .stack-table th { color: var(--accent); font-size: 1rem; }
 
+        /* CONTACT - FIX FORM & BUTTON */
         .contact-section { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; background-color: var(--bg-dark); padding: 80px 40px; border-radius: 20px; margin-bottom: 40px; }
         .contact-info h2 { color: #fff; font-size: 2.5rem; margin-bottom: 20px; }
         .contact-info p { color: var(--text-body); margin-bottom: 10px; }
-        .form-container input, .form-container textarea { width: 100%; padding: 15px; margin-bottom: 15px; border-radius: 8px; border: none; background-color: var(--bg-primary); color: #fff; }
+        .form-container input, .form-container textarea { width: 100%; padding: 15px; margin-bottom: 15px; border-radius: 8px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3); color: #fff; }
+        .form-container input::placeholder, .form-container textarea::placeholder { color: #A9B7C6; }
         .form-container button { background-color: #FF6B35; color: white; border: none; padding: 15px 30px; border-radius: 50px; font-weight: bold; cursor: pointer; }
 
         footer { text-align: center; padding: 40px; border-top: 1px solid rgba(255,255,255,0.1); }
@@ -58,7 +77,7 @@
 
         @media (max-width: 900px) {
             .hero { grid-template-columns: 1fr; text-align: center; padding-top: 40px; }
-            .hero h1 { font-size: 2.5rem; }
+            .hero-graphic { height: 300px; }
             .grid-3, .grid-4 { grid-template-columns: 1fr; }
             .contact-section { grid-template-columns: 1fr; }
             .logo img { height: 100px; }
@@ -74,6 +93,7 @@
             <a href="#stack">Stack</a>
             <a href="#contact">Contact</a>
         </div>
+        <!-- REMOVED DUPLICATE CTA IN HERO, KEPT HEADER ONE -->
         <a href="https://wa.me/27714443601" class="nav-cta">Book a Free Call</a>
     </nav>
 
@@ -81,85 +101,78 @@
         <div>
             <h1>Automation That <br><span>Awakens Growth</span></h1>
             <p>We are a Pretoria-based Enterprise AI Systems Integrator that builds custom intelligence systems for large organisations across South Africa. We eliminate manual admin, automate complex workflows, and unlock scalable growth with AI and intelligent automation.</p>
-            <a href="https://wa.me/27714443601" class="cta-button">Book a Free Call</a>
         </div>
-        <div class="hero-graphic"></div>
+        <div class="hero-graphic-container">
+            <div class="graphic-label">Your Lead Flow in 5 Seconds</div>
+            <div class="hero-graphic"></div>
+        </div>
     </div>
 
+    <!-- FOCUSED ON 3 SECTORS -->
     <div class="section" id="industries">
         <h2 class="section-title">Industries We Serve</h2>
         <div class="grid-3">
-            <div class="card"><h3>⛏️ Mining & Energy</h3><p>Automating compliance reports, safety data entry, and equipment monitoring.</p></div>
-            <div class="card"><h3>🛒 Retail & Wholesale</h3><p>Automating inventory management, stock forecasting, and supplier communications.</p></div>
-            <div class="card"><h3>🚚 Logistics & E-Commerce</h3><p>Automating fleet route planning, order tracking, and dispatch workflows.</p></div>
             <div class="card"><h3>🏦 Financial Services & Banking</h3><p>Automating sensitive document processing, KYC checks, and client onboarding.</p></div>
-            <div class="card"><h3>🏭 Manufacturing</h3><p>Automating quality control logs, invoice processing, and supply chain alerts.</p></div>
-            <div class="card"><h3>📡 Telecommunications & ICT</h3><p>Automating network ticket routing, customer onboarding, and data integration.</p></div>
-            <div class="card"><h3>🌾 Agriculture & Agribusiness</h3><p>Automating yield tracking, supplier data collection, and export paperwork.</p></div>
-            <div class="card"><h3>🏨 Tourism & Hospitality</h3><p>Automating booking management, customer feedback responses, and staff scheduling.</p></div>
+            <div class="card"><h3>🚚 Logistics & E-Commerce</h3><p>Automating fleet route planning, order tracking, and dispatch workflows.</p></div>
             <div class="card"><h3>🏠 Real Estate & Property</h3><p>Automating lead qualification, lease document processing, and property listing updates.</p></div>
         </div>
     </div>
 
+    <!-- GROUPED INTO 3 PACKAGES -->
     <div class="section" id="services" style="background-color: var(--bg-dark); border-radius: 20px;">
         <h2 class="section-title">Our Core Services</h2>
-        <div class="grid-4">
-            <div class="card"><h3>1. Custom AI Agents</h3><p>Bespoke AI agents built on retrieval-augmented generation and large language models.</p></div>
-            <div class="card"><h3>2. Enterprise Data Scraping</h3><p>Automated data collection and lead intelligence pipelines.</p></div>
-            <div class="card"><h3>3. Intelligent Document Automation</h3><p>End-to-end automation of document capture, processing, and filing.</p></div>
-            <div class="card"><h3>4. Workflow Orchestration (n8n)</h3><p>Connects existing systems and automates cross-platform workflows.</p></div>
-            <div class="card"><h3>5. AI Voice Agents & WhatsApp</h3><p>24/7 automated customer engagement via voice and WhatsApp.</p></div>
-            <div class="card"><h3>6. Predictive Analytics & Dashboards</h3><p>Real-time dashboards and forecasting for executive decision-making.</p></div>
-            <div class="card"><h3>7. Browser & Web Automation</h3><p>Automates repetitive browser-based tasks and workflows.</p></div>
-            <div class="card"><h3>8. Custom Software Development</h3><p>Bespoke software built to fit specific operational needs (Python, FastAPI).</p></div>
+        <div class="grid-3">
+            <div class="card"><h3>1. AI Agents</h3><p>Custom AI Agents (RAG & LLMs), AI Voice Agents, and WhatsApp Automation for 24/7 customer engagement.</p></div>
+            <div class="card"><h3>2. Data Automation</h3><p>Enterprise Data Scraping & Lead Intelligence and Intelligent Document Automation to eliminate manual entry.</p></div>
+            <div class="card"><h3>3. Systems Integration</h3><p>Workflow Orchestration (n8n), API Integration, Predictive Dashboards, and Custom Software Development (Python, FastAPI).</p></div>
         </div>
     </div>
 
     <div class="section" id="stack">
         <h2 class="section-title">The Vuka Automation Stack</h2>
         <table class="stack-table">
-            <tr><th>Area</th><th>Tool</th></tr>
-            <tr><td>🐍 Programming</td><td>Python</td></tr>
-            <tr><td>🤖 AI</td><td>LLMs / AI APIs</td></tr>
-            <tr><td>⚙️ Automation</td><td>n8n</td></tr>
-            <tr><td>🌐 Data</td><td>Web scraping</td></tr>
-            <tr><td>🗄️ Database</td><td>Supabase / PostgreSQL</td></tr>
-            <tr><td>🚀 APIs</td><td>FastAPI</td></tr>
-            <tr><td>🌎 Browser automation</td><td>Playwright</td></tr>
-            <tr><td>🐳 Infrastructure</td><td>Docker</td></tr>
-            <tr><td>🧠 Local AI</td><td>Ollama</td></tr>
-            <tr><td>🔐 Authentication</td><td>Supabase Auth</td></tr>
-            <tr><td>📊 Dashboards</td><td>Streamlit</td></tr>
-            <tr><td>🔗 APIs/Webhooks</td><td>REST + Webhooks</td></tr>
-            <tr><td>🔍 AI knowledge</td><td>RAG + vector databases</td></tr>
-            <tr><td>💬 Messaging</td><td>WhatsApp APIs</td></tr>
-            <tr><td>💳 Payments</td><td>Payment APIs</td></tr>
-            <tr><td>📧 Email</td><td>Email APIs</td></tr>
+            <tr><th>Capability</th><th>Technology</th></tr>
+            <tr><td>Custom Development</td><td>Python</td></tr>
+            <tr><td>Enterprise AI</td><td>LLMs / AI APIs</td></tr>
+            <tr><td>Workflow Automation</td><td>n8n</td></tr>
+            <tr><td>Lead Intelligence</td><td>Web scraping</td></tr>
+            <tr><td>Database</td><td>Supabase / PostgreSQL</td></tr>
+            <tr><td>APIs</td><td>FastAPI</td></tr>
+            <tr><td>Browser Automation</td><td>Playwright</td></tr>
+            <tr><td>Infrastructure</td><td>Docker</td></tr>
+            <tr><td>Local AI</td><td>Ollama</td></tr>
+            <tr><td>Authentication</td><td>Supabase Auth</td></tr>
+            <tr><td>Dashboards</td><td>Streamlit</td></tr>
+            <tr><td>APIs/Webhooks</td><td>REST + Webhooks</td></tr>
+            <tr><td>AI Knowledge</td><td>RAG + Vector Databases</td></tr>
+            <tr><td>Messaging</td><td>WhatsApp APIs</td></tr>
+            <tr><td>Payments</td><td>Payment APIs</td></tr>
+            <tr><td>Email</td><td>Email APIs</td></tr>
         </table>
     </div>
 
     <div class="section">
         <h2 class="section-title">Solutions for Modern Business</h2>
         <div class="grid-4">
-            <div class="card"><h3>👥 Digital Workforce Expansion</h3><p>Scale operations without linear hiring.</p></div>
-            <div class="card"><h3>🗂️ Zero Data Entry</h3><p>Eliminate manual capture and reduce errors.</p></div>
-            <div class="card"><h3>💬 24/7 Customer Engagement</h3><p>AI agents respond instantly, anytime.</p></div>
-            <div class="card"><h3>🔗 Unified Business Systems</h3><p>Connect apps, data, and teams seamlessly.</p></div>
-            <div class="card"><h3>📈 Predictive Operations</h3><p>Forecast trends and act before problems arise.</p></div>
-            <div class="card"><h3>👁️ Total Transparency</h3><p>Real-time dashboards. Real answers.</p></div>
-            <div class="card"><h3>🧠 Intelligence Automation</h3><p>AI that learns, reasons, and drives decisions.</p></div>
-            <div class="card"><h3>📦 Supply Chain Optimization</h3><p>Resilient, visible, and always-on supply chains.</p></div>
+            <div class="card card-white"><div class="solution-icon">👥</div><h3>Digital Workforce Expansion</h3><p>Scale operations without linear hiring.</p></div>
+            <div class="card card-white"><div class="solution-icon">🗂️</div><h3>Zero Data Entry</h3><p>Eliminate manual capture and reduce errors.</p></div>
+            <div class="card card-white"><div class="solution-icon">💬</div><h3>24/7 Customer Engagement</h3><p>AI agents respond instantly, anytime.</p></div>
+            <div class="card card-white"><div class="solution-icon">🔗</div><h3>Unified Business Systems</h3><p>Connect apps, data, and teams seamlessly.</p></div>
+            <div class="card card-white"><div class="solution-icon">📈</div><h3>Predictive Operations</h3><p>Forecast trends and act before problems arise.</p></div>
+            <div class="card card-white"><div class="solution-icon">👁️</div><h3>Total Transparency</h3><p>Real-time dashboards. Real answers.</p></div>
+            <div class="card card-white"><div class="solution-icon">🧠</div><h3>Intelligence Automation</h3><p>AI that learns, reasons, and drives decisions.</p></div>
+            <div class="card card-white"><div class="solution-icon">📦</div><h3>Supply Chain Optimization</h3><p>Resilient, visible, and always-on supply chains.</p></div>
         </div>
     </div>
 
     <div class="section">
         <h2 class="section-title">How We Work</h2>
-        <div class="cards-grid" style="grid-template-columns: 1fr;">
-            <div class="card"><h3>1. Discovery Call</h3><p>A short conversation to understand the challenge and desired outcome.</p></div>
-            <div class="card"><h3>2. Proposal & Agreement</h3><p>A tailored proposal with scope, timeline, and investment, backed by a Service Agreement and Mutual NDA.</p></div>
-            <div class="card"><h3>3. Build Phase</h3><p>Development, configuration, and integration, with regular progress updates.</p></div>
-            <div class="card"><h3>4. Testing & Training</h3><p>Client User Acceptance Testing plus a recorded training session.</p></div>
-            <div class="card"><h3>5. Handover & Support</h3><p>Full documentation, credentials, and a 30-day post-go-live support window.</p></div>
+        <div class="how-work">
+            <div class="step"><div class="step-title"><span>01</span> Discovery Call</div><p>A short conversation to understand the challenge and desired outcome.</p></div>
+            <div class="step"><div class="step-title"><span>02</span> Proposal & Agreement</div><p>A tailored proposal with scope, timeline, and investment, backed by a Service Agreement and Mutual NDA.</p></div>
+            <div class="step"><div class="step-title"><span>03</span> Build Phase</div><p>Development, configuration, and integration, with regular progress updates.</p></div>
+            <div class="step"><div class="step-title"><span>04</span> Testing & Training</div><p>Client User Acceptance Testing plus a recorded training session.</p></div>
+            <div class="step"><div class="step-title"><span>05</span> Handover & Support</div><p>Full documentation, credentials, and a 30-day post-go-live support window.</p></div>
         </div>
     </div>
 
@@ -167,7 +180,7 @@
         <div class="contact-section">
             <div class="contact-info">
                 <h2>Let's build intelligence systems that drive real business impact.</h2>
-                <p><strong>Email:</strong> vukaautomation@gmail.com</p>
+                <p><strong>Email:</strong> <a href="mailto:vukaautomation@gmail.com" style="color:#00BAC5;">vukaautomation [at] gmail.com</a></p>
                 <p><strong>WhatsApp:</strong> +27 71 444 3601</p>
                 <p><strong>Location:</strong> Pretoria, South Africa</p>
             </div>
