@@ -19,25 +19,33 @@
         .nav-cta { background-color: var(--orange); color: #fff; padding: 12px 24px; border-radius: 50px; text-decoration: none; font-weight: 600; }
         .nav-cta:hover { background-color: #fff; color: var(--bg-primary); }
 
-        /* HERO - FIXED IMAGE SIZE */
+        /* HERO */
         .hero { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; padding: 80px 40px; align-items: center; background: radial-gradient(circle at 100% 0%, #031233 0%, #00214E 60%); }
         .hero h1 { font-family: 'Space Grotesk', sans-serif; font-size: 4rem; line-height: 1.1; margin-bottom: 20px; color: #fff; }
         .hero h1 span { color: var(--accent); }
-        .hero p { color: var(--text-body); font-size: 1.2rem; margin-bottom: 30px; max-width: 500px; }
+        .hero p { color: var(--text-body); font-size: 1.1rem; margin-bottom: 30px; max-width: 500px; }
+        .cta-button { background-color: var(--orange); color: white; padding: 16px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; transition: transform 0.3s; }
+        .cta-button:hover { transform: translateY(-3px); background-color: #fff; color: var(--bg-primary); }
+        .hero-cta-wrap { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+        .cta-note { color: var(--text-body); font-size: 0.85rem; }
         .hero-graphic { width: 100%; height: auto; max-height: 500px; border-radius: 20px; object-fit: contain; display: block; }
 
         /* SECTIONS */
         .section { padding: 80px 40px; max-width: 1200px; margin: 0 auto; }
-        .section-title { font-size: 2.5rem; margin: 0 0 30px 0; color: #fff; }
+        .section-title { font-size: 2.5rem; margin: 0 0 10px 0; color: #fff; }
         .section-title::before { content: ''; display: inline-block; width: 12px; height: 12px; border-radius: 50%; background-color: var(--accent); margin-right: 10px; }
+        .section-intro { color: var(--text-body); font-size: 1.1rem; margin-bottom: 40px; max-width: 700px; }
+
+        /* GRIDS */
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
 
         /* INDUSTRIES */
-        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
         .industry-item { padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
         .industry-item h3 { font-size: 1.2rem; margin: 0 0 5px 0; color: #fff; }
         .industry-item p { color: var(--text-body); margin: 0; font-size: 0.95rem; }
 
-        /* SERVICES - COMPACT HORIZONTAL */
+        /* SERVICES */
         .services-list { max-width: 800px; margin: 0 auto; }
         .service-row { display: flex; align-items: center; gap: 15px; padding: 15px 20px; background: var(--bg-dark); border: 1px solid rgba(0, 212, 255, 0.4); border-radius: 12px; margin-bottom: 15px; transition: 0.3s; }
         .service-row:hover { border-color: var(--accent); transform: translateY(-2px); }
@@ -46,7 +54,7 @@
         .service-title { font-size: 1.3rem; font-weight: 700; color: #fff; font-family: 'Space Grotesk', sans-serif; }
         .service-subtitle { font-size: 0.95rem; color: var(--text-body); margin-top: 2px; }
         
-        /* SHOWCASE IMAGES */
+        /* SHOWCASE */
         .image-showcase { text-align: center; }
         .image-showcase img { width: 100%; max-width: 900px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
 
@@ -57,7 +65,7 @@
         .step-content h3 { margin: 0 0 5px 0; color: #fff; font-size: 1.4rem; }
         .step-content p { color: var(--text-body); margin: 0; font-size: 0.95rem; }
 
-        /* STACK SECTION */
+        /* STACK */
         .stack-section { background-color: #0A1F44; padding: 80px 40px; }
         .stack-header { color: #FFFFFF; font-family: 'Space Grotesk', sans-serif; font-size: 3rem; margin-bottom: 50px; text-align: center; }
         .stack-wrapper { max-width: 900px; margin: 0 auto; }
@@ -90,8 +98,10 @@
 
         @media (max-width: 900px) {
             .hero { grid-template-columns: 1fr; text-align: center; padding-top: 60px; }
+            .hero-cta-wrap { align-items: center; }
             .hero-graphic { max-height: 300px; margin-top: 20px; }
             .grid-3 { grid-template-columns: 1fr; }
+            .grid-4 { grid-template-columns: 1fr; }
             .contact-section { grid-template-columns: 1fr; }
             .logo img { height: 80px; }
             .stack-header { font-size: 2rem; }
@@ -109,44 +119,49 @@
             <a href="#stack">Stack</a>
             <a href="#contact">Contact</a>
         </div>
-        <a href="https://wa.me/27714443601" class="nav-cta">Book a Free Call</a>
+        <a href="https://calendly.com/vukaautomation" class="nav-cta">Book a Free Call</a>
     </nav>
 
     <div class="hero">
         <div>
             <h1>Automation That <br><span>Awakens Growth</span></h1>
-            <p>We are a Pretoria-based Enterprise AI Systems Integrator that builds custom intelligence systems for large organisations across South Africa. We eliminate manual admin, automate complex workflows, and unlock scalable growth with AI and intelligent automation.</p>
+            <p>We are a Pretoria-based Enterprise AI Systems Integrator. We build custom AI systems that eliminate manual admin, automate complex workflows, and help South African companies scale without hiring more people.</p>
+            <div class="hero-cta-wrap">
+                <a href="https://calendly.com/vukaautomation" class="cta-button">Book a Free Call</a>
+                <span class="cta-note">Free 20-minute discovery call • No obligation</span>
+            </div>
         </div>
-        <!-- FIXED IMAGE TAGS -->
         <img src="flow.jpg" class="hero-graphic" alt="Vuka Agent Flow">
     </div>
 
     <div class="section" id="industries">
         <h2 class="section-title">Industries We Serve</h2>
+        <p class="section-intro">We help organisations across key South African industries eliminate manual work and unlock efficiency with custom AI and automation systems.</p>
         <div class="grid-3">
             <div class="industry-item"><h3>⛏️ Mining & Energy</h3><p>Automating compliance reports, safety data entry, and equipment monitoring.</p></div>
             <div class="industry-item"><h3>🛒 Retail & Wholesale</h3><p>Automating inventory management, stock forecasting, and supplier communications.</p></div>
             <div class="industry-item"><h3>🚚 Logistics & E-Commerce</h3><p>Automating fleet route planning, order tracking, and dispatch workflows.</p></div>
-            <div class="industry-item"><h3>🏦 Financial Services & Banking</h3><p>Automating sensitive document processing, KYC checks, and client onboarding.</p></div>
+            <div class="industry-item"><h3>🏦 Financial Services & Banking</h3><p>Automating document processing, KYC checks, and client onboarding.</p></div>
             <div class="industry-item"><h3>🏭 Manufacturing</h3><p>Automating quality control logs, invoice processing, and supply chain alerts.</p></div>
             <div class="industry-item"><h3>📡 Telecommunications & ICT</h3><p>Automating network ticket routing, customer onboarding, and data integration.</p></div>
             <div class="industry-item"><h3>🌾 Agriculture & Agribusiness</h3><p>Automating yield tracking, supplier data collection, and export paperwork.</p></div>
-            <div class="industry-item"><h3>🏨 Tourism & Hospitality</h3><p>Automating booking management, customer feedback responses, and staff scheduling.</p></div>
-            <div class="industry-item"><h3>🏠 Real Estate & Property</h3><p>Automating lead qualification, lease document processing, and property listing updates.</p></div>
+            <div class="industry-item"><h3>🏨 Tourism & Hospitality</h3><p>Automating booking management, customer feedback, and staff scheduling.</p></div>
+            <div class="industry-item"><h3>🏠 Real Estate & Property</h3><p>Automating lead qualification, lease document processing, and property updates.</p></div>
         </div>
     </div>
 
     <div class="section" id="services">
         <h2 class="section-title">Our Core Services</h2>
+        <p class="section-intro">We design and build practical AI and automation systems that remove manual work and give your team leverage.</p>
         <div class="services-list">
-            <div class="service-row"><div class="service-icon">🛜</div><div class="service-text"><div class="service-title">AI Agents</div><div class="service-subtitle">24/7 custom agents</div></div></div>
-            <div class="service-row"><div class="service-icon">📈</div><div class="service-text"><div class="service-title">Data Automation</div><div class="service-subtitle">No more manual entry</div></div></div>
-            <div class="service-row"><div class="service-icon">🔗</div><div class="service-text"><div class="service-title">Systems Integration</div><div class="service-subtitle">n8n, APIs, dashboards</div></div></div>
-            <div class="service-row"><div class="service-icon">📄</div><div class="service-text"><div class="service-title">Document Processing</div><div class="service-subtitle">Invoices, contracts, compliance</div></div></div>
-            <div class="service-row"><div class="service-icon">🔍</div><div class="service-text"><div class="service-title">Lead Intelligence</div><div class="service-subtitle">Find your next big client</div></div></div>
-            <div class="service-row"><div class="service-icon">📊</div><div class="service-text"><div class="service-title">Predictive Dashboards</div><div class="service-subtitle">Real-time executive insights</div></div></div>
-            <div class="service-row"><div class="service-icon">🌐</div><div class="service-text"><div class="service-title">Web Automation</div><div class="service-subtitle">Playwright</div></div></div>
-            <div class="service-row"><div class="service-icon">🚀</div><div class="service-text"><div class="service-title">Custom Development</div><div class="service-subtitle">Python & FastAPI</div></div></div>
+            <div class="service-row"><div class="service-icon">🛜</div><div class="service-text"><div class="service-title">1. Custom AI Agents (RAG & LLMs)</div><div class="service-subtitle">Intelligent agents that understand your data, answer questions, and take action across your systems 24/7.</div></div></div>
+            <div class="service-row"><div class="service-icon">📄</div><div class="service-text"><div class="service-title">2. Intelligent Document Automation</div><div class="service-subtitle">Automatically extract, process, and route information from invoices, contracts, forms, and compliance documents.</div></div></div>
+            <div class="service-row"><div class="service-icon">🔗</div><div class="service-text"><div class="service-title">3. Workflow Orchestration & Integration (n8n)</div><div class="service-subtitle">Connect your existing tools and automate complex multi-step processes without replacing your current software.</div></div></div>
+            <div class="service-row"><div class="service-icon">💬</div><div class="service-text"><div class="service-title">4. AI Voice & WhatsApp Automation</div><div class="service-subtitle">Deploy AI agents that handle customer conversations, qualify leads, and respond instantly on WhatsApp and voice.</div></div></div>
+            <div class="service-row"><div class="service-icon">🔍</div><div class="service-text"><div class="service-title">5. Enterprise Data Scraping & Lead Intelligence</div><div class="service-subtitle">Find and enrich high-value B2B leads with accurate, up-to-date information.</div></div></div>
+            <div class="service-row"><div class="service-icon">📊</div><div class="service-text"><div class="service-title">6. Predictive Analytics & Executive Dashboards</div><div class="service-subtitle">Real-time dashboards that give leadership clear visibility and help forecast problems before they happen.</div></div></div>
+            <div class="service-row"><div class="service-icon">🌐</div><div class="service-text"><div class="service-title">7. Browser & Web Automation (Playwright)</div><div class="service-subtitle">Automate repetitive tasks across websites and web-based systems reliably at scale.</div></div></div>
+            <div class="service-row"><div class="service-icon">🚀</div><div class="service-text"><div class="service-title">8. Custom Software Development (Python & FastAPI)</div><div class="service-subtitle">Tailored backend systems and APIs built specifically for your operational needs.</div></div></div>
         </div>
     </div>
 
@@ -158,6 +173,7 @@
 
     <div class="stack-section" id="stack">
         <h2 class="stack-header">VUKA AUTOMATION STACK</h2>
+        <p class="section-intro" style="text-align: center; margin: 0 auto 50px auto;">We use proven, modern tools to build reliable and scalable automation systems.</p>
         <div class="stack-wrapper">
             <div class="stack-row"><div class="capability">🐍 Custom Development</div><div class="technology-pill">Python</div></div>
             <div class="stack-row"><div class="capability">🤖 Enterprise AI</div><div class="technology-pill">LLMs / AI APIs</div></div>
@@ -180,15 +196,16 @@
 
     <div class="section">
         <h2 class="section-title">Solutions for Modern Business</h2>
-        <div class="grid-3">
-            <div class="solution-item"><div class="solution-icon">👥</div><h3>Digital Workforce Expansion</h3><p>Scale without hiring.</p></div>
-            <div class="solution-item"><div class="solution-icon">🗂️</div><h3>Zero Data Entry</h3><p>Eliminate manual errors.</p></div>
-            <div class="solution-item"><div class="solution-icon">💬</div><h3>24/7 Engagement</h3><p>Instant customer response.</p></div>
-            <div class="solution-item"><div class="solution-icon">🔗</div><h3>Unified Systems</h3><p>Seamless data flow.</p></div>
-            <div class="solution-item"><div class="solution-icon">📈</div><h3>Predictive Operations</h3><p>Forecast before issues.</p></div>
-            <div class="solution-item"><div class="solution-icon">👁️</div><h3>Total Transparency</h3><p>Real-time answers.</p></div>
-            <div class="solution-item"><div class="solution-icon">🧠</div><h3>Intelligence Automation</h3><p>AI that drives decisions.</p></div>
-            <div class="solution-item"><div class="solution-icon">📦</div><h3>Supply Chain Optimization</h3><p>Resilient and visible.</p></div>
+        <p class="section-intro">Practical outcomes we deliver for growing organisations.</p>
+        <div class="grid-4">
+            <div class="solution-item"><div class="solution-icon">👥</div><h3>Digital Workforce Expansion</h3><p>Scale operations without linearly increasing headcount.</p></div>
+            <div class="solution-item"><div class="solution-icon">🗂️</div><h3>Zero Data Entry</h3><p>Eliminate repetitive manual data capture and reduce human error.</p></div>
+            <div class="solution-item"><div class="solution-icon">💬</div><h3>24/7 Customer Engagement</h3><p>AI agents that respond instantly and qualify leads around the clock.</p></div>
+            <div class="solution-item"><div class="solution-icon">🔗</div><h3>Unified Business Systems</h3><p>Connect your existing tools into one intelligent, automated flow.</p></div>
+            <div class="solution-item"><div class="solution-icon">📈</div><h3>Predictive Operations</h3><p>Spot issues early and make decisions based on real-time data.</p></div>
+            <div class="solution-item"><div class="solution-icon">👁️</div><h3>Total Transparency</h3><p>Give leadership clear visibility across operations at any moment.</p></div>
+            <div class="solution-item"><div class="solution-icon">🧠</div><h3>Intelligence Automation</h3><p>Turn your company data into actionable insights and automated actions.</p></div>
+            <div class="solution-item"><div class="solution-icon">📦</div><h3>Supply Chain Optimization</h3><p>Improve visibility, speed, and resilience across your supply chain.</p></div>
         </div>
     </div>
 
@@ -200,31 +217,34 @@
 
     <div class="section">
         <h2 class="section-title">How We Work</h2>
+        <p class="section-intro">A clear and structured process from first conversation to full handover.</p>
         <div class="how-work">
-            <div class="step"><div class="step-number">01</div><div class="step-content"><h3>Discovery Call</h3><p>A short conversation to understand the challenge.</p></div></div>
-            <div class="step"><div class="step-number">02</div><div class="step-content"><h3>Proposal & Agreement</h3><p>A tailored proposal with scope and investment.</p></div></div>
-            <div class="step"><div class="step-number">03</div><div class="step-content"><h3>Build Phase</h3><p>Development and integration with progress updates.</p></div></div>
-            <div class="step"><div class="step-number">04</div><div class="step-content"><h3>Testing & Training</h3><p>User acceptance testing and recorded training.</p></div></div>
-            <div class="step"><div class="step-number">05</div><div class="step-content"><h3>Handover & Support</h3><p>Full documentation and a 30-day support window.</p></div></div>
+            <div class="step"><div class="step-number">01</div><div class="step-content"><h3>Discovery Call</h3><p>A short conversation to understand your biggest operational challenges and goals.</p></div></div>
+            <div class="step"><div class="step-number">02</div><div class="step-content"><h3>Proposal & Agreement</h3><p>You receive a clear proposal with scope, timeline, and investment. We work under a formal Service Agreement and NDA.</p></div></div>
+            <div class="step"><div class="step-number">03</div><div class="step-content"><h3>Build Phase</h3><p>We design and build your custom automation system with regular progress updates.</p></div></div>
+            <div class="step"><div class="step-number">04</div><div class="step-content"><h3>Testing & Training</h3><p>You test the system, we refine it, and we provide recorded training for your team.</p></div></div>
+            <div class="step"><div class="step-number">05</div><div class="step-content"><h3>Handover & Support</h3><p>Full documentation is delivered, and you receive 30 days of support after go-live.</p></div></div>
         </div>
     </div>
 
     <div class="section" id="contact" style="padding-top: 0;">
         <div class="contact-section">
             <div class="contact-info">
-                <h2>Let's build intelligence systems that drive real business impact.</h2>
+                <h2>Let’s build intelligence systems that drive real business impact.</h2>
+                <p>Ready to eliminate manual work and give your team leverage? Book a free discovery call and let’s explore what’s possible.</p>
                 <p><span class="contact-icon">📧</span> <a href="mailto:vukaautomation@gmail.com" style="color:#00BAC5;">vukaautomation@gmail.com</a></p>
-                <p><span class="contact-icon">📞</span> <a href="https://wa.me/27714443601" style="color:#00BAC5;">+27 71 444 3601</a></p>
+                <p><span class="contact-icon">📞</span> <a href="https://calendly.com/vukaautomation" style="color:#00BAC5;">+27 71 444 3601</a></p>
                 <p><span class="contact-icon">📍</span> Pretoria, South Africa</p>
+                <a href="https://calendly.com/vukaautomation" class="cta-button" style="margin-top: 20px; display: inline-block;">Book a Free Call</a>
             </div>
             <div class="form-container">
-                <form onsubmit="event.preventDefault(); window.location.href='https://wa.me/27714443601';">
+                <form onsubmit="event.preventDefault(); window.location.href='https://calendly.com/vukaautomation';">
                     <input type="text" placeholder="Full Name" required>
                     <input type="email" placeholder="Email" required>
                     <input type="tel" placeholder="Phone Number">
                     <input type="text" placeholder="Company Name">
                     <textarea rows="4" placeholder="Message" required></textarea>
-                    <button type="submit">Send Message</button>
+                    <button type="submit">Book a Free Call</button>
                 </form>
             </div>
         </div>
