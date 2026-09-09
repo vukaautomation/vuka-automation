@@ -19,12 +19,12 @@
         .nav-cta { background-color: var(--orange); color: #fff; padding: 12px 24px; border-radius: 50px; text-decoration: none; font-weight: 600; }
         .nav-cta:hover { background-color: #fff; color: var(--bg-primary); }
 
-        /* HERO */
+        /* HERO - FIXED IMAGE SIZE */
         .hero { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; padding: 80px 40px; align-items: center; background: radial-gradient(circle at 100% 0%, #031233 0%, #00214E 60%); }
         .hero h1 { font-family: 'Space Grotesk', sans-serif; font-size: 4rem; line-height: 1.1; margin-bottom: 20px; color: #fff; }
         .hero h1 span { color: var(--accent); }
         .hero p { color: var(--text-body); font-size: 1.2rem; margin-bottom: 30px; max-width: 500px; }
-        .hero-graphic { width: 100%; height: 500px; border-radius: 20px; background-image: url('flow.jpg'); background-size: cover; background-position: center; }
+        .hero-graphic { width: 100%; height: auto; max-height: 500px; border-radius: 20px; object-fit: contain; display: block; }
 
         /* SECTIONS */
         .section { padding: 80px 40px; max-width: 1200px; margin: 0 auto; }
@@ -90,7 +90,7 @@
 
         @media (max-width: 900px) {
             .hero { grid-template-columns: 1fr; text-align: center; padding-top: 60px; }
-            .hero-graphic { height: 300px; margin-top: 20px; }
+            .hero-graphic { max-height: 300px; margin-top: 20px; }
             .grid-3 { grid-template-columns: 1fr; }
             .contact-section { grid-template-columns: 1fr; }
             .logo img { height: 80px; }
@@ -117,7 +117,8 @@
             <h1>Automation That <br><span>Awakens Growth</span></h1>
             <p>We are a Pretoria-based Enterprise AI Systems Integrator that builds custom intelligence systems for large organisations across South Africa. We eliminate manual admin, automate complex workflows, and unlock scalable growth with AI and intelligent automation.</p>
         </div>
-        <div class="hero-graphic"></div>
+        <!-- FIXED IMAGE TAGS -->
+        <img src="flow.jpg" class="hero-graphic" alt="Vuka Agent Flow">
     </div>
 
     <div class="section" id="industries">
@@ -135,7 +136,6 @@
         </div>
     </div>
 
-    <!-- SERVICES - COMPACT VERSION -->
     <div class="section" id="services">
         <h2 class="section-title">Our Core Services</h2>
         <div class="services-list">
@@ -156,7 +156,6 @@
         <img src="dashboard.jpg" alt="Vuka Automation Dashboard">
     </div>
 
-    <!-- STACK SECTION -->
     <div class="stack-section" id="stack">
         <h2 class="stack-header">VUKA AUTOMATION STACK</h2>
         <div class="stack-wrapper">
