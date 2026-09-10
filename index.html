@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vuka Automation | Enterprise AI Systems Integrator</title>
-    <meta name="description" content="Vuka Automation is a Pretoria-based Enterprise AI Systems Integrator building custom intelligence systems for large organizations.">
+    <meta name="description" content="Vuka Automation builds custom AI agents, workflow automation, and document processing systems for South African businesses in mining, logistics, finance & more. Book a free discovery call.">
     <link rel="icon" type="image/png" href="logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
     <style>
-        :root { --bg-primary: #00214E; --accent: #00BAC5; --cyan: #00D4FF; --orange: #FF6B35; --text-main: #FFFFFF; --text-body: #A9B7C6; }
+        :root { --bg-primary: #00214E; --bg-dark: #031233; --accent: #00BAC5; --cyan: #00D4FF; --orange: #FF6B35; --text-main: #FFFFFF; --text-body: #A9B7C6; }
         body { font-family: 'Inter', sans-serif; background-color: var(--bg-primary); color: var(--text-main); margin: 0; line-height: 1.6; font-size: 16px; }
         
         /* NAV */
@@ -20,7 +20,7 @@
         .nav-cta:hover { background-color: #fff; color: var(--bg-primary); }
 
         /* HERO */
-        .hero { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; padding: 80px 40px; align-items: center; }
+        .hero { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; padding: 80px 40px; align-items: center; background: radial-gradient(circle at 100% 0%, #031233 0%, #00214E 60%); }
         .hero h1 { font-family: 'Space Grotesk', sans-serif; font-size: 4.5rem; line-height: 1.1; margin-bottom: 20px; color: #fff; text-transform: uppercase; }
         .hero h1 span { color: var(--accent); }
         .hero p { color: var(--text-body); font-size: 1.2rem; margin-bottom: 30px; max-width: 500px; }
@@ -37,7 +37,7 @@
         .industry-item h3 { font-size: 1.2rem; margin: 0 0 5px 0; color: #fff; }
         .industry-item p { color: var(--text-body); margin: 0; font-size: 0.95rem; }
 
-        /* SERVICES - MAXCONTACT STYLE (Emojis, no boxes) */
+        /* SERVICES - MAXCONTACT STYLE */
         .services-list { max-width: 800px; margin: 0 auto; }
         .service-row { display: flex; align-items: center; gap: 20px; padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
         .service-row:last-child { border-bottom: none; }
@@ -66,15 +66,18 @@
         .capability { color: #FFFFFF; font-weight: 700; font-size: 1.3rem; }
         .technology-pill { background-color: var(--cyan); color: #000000; padding: 10px 20px; border-radius: 50px; font-weight: 700; font-size: 1rem; }
 
-        /* SOLUTIONS - MAXCONTACT STYLE */
-        .solution-item { padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        /* SOLUTIONS */
+        .solution-item { text-align: center; padding: 20px; background: var(--bg-dark); border-radius: 12px; margin-bottom: 20px; }
         .solution-icon { font-size: 2rem; margin-bottom: 10px; }
-        .solution-item h3 { font-size: 1.2rem; margin: 0 0 5px 0; color: #fff; }
+        .solution-item h3 { font-size: 1.1rem; margin: 0 0 5px 0; color: #fff; }
         .solution-item p { color: var(--text-body); margin: 0; font-size: 0.9rem; }
 
+        /* FOUNDER SECTION */
+        .founder-section { background-color: var(--bg-dark); border-radius: 20px; padding: 60px 40px; margin-bottom: 40px; }
+
         /* CONTACT */
-        .contact-section { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; background: var(--bg-primary); padding: 80px 40px; }
-        .contact-info h2 { color: #fff; font-size: 3rem; margin-bottom: 20px; text-transform: uppercase; }
+        .contact-section { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; background: var(--bg-dark); padding: 80px 40px; border-radius: 20px; margin-bottom: 40px; }
+        .contact-info h2 { color: #fff; font-size: 2.5rem; margin-bottom: 20px; }
         .contact-info p { color: var(--text-body); margin-bottom: 15px; font-size: 1.2rem; }
         .contact-icon { font-size: 1.2rem; margin-right: 10px; }
         .form-container input, .form-container textarea { width: 100%; padding: 15px; margin-bottom: 15px; border-radius: 8px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3); color: #fff; font-family: 'Inter', sans-serif; }
@@ -211,6 +214,62 @@
             <div class="step"><div class="step-number">04</div><div class="step-content"><h3>Testing & Training</h3><p>You test the system, we refine it, and we provide recorded training for your team.</p></div></div>
             <div class="step"><div class="step-number">05</div><div class="step-content"><h3>Handover & Support</h3><p>Full documentation is delivered, and you receive 30 days of support after go-live.</p></div></div>
         </div>
+        <p style="color: var(--accent); font-weight: 600; margin-top: 30px; text-align: center;">Investment: Typical projects range from R8,000 to R50,000 depending on complexity. Monthly retainers available after launch.</p>
+    </div>
+
+    <!-- FOUNDER & TRUST SECTION -->
+    <div class="section founder-section">
+        <h2 class="section-title">MEET THE <span>FOUNDER</span></h2>
+        <div style="display: flex; align-items: center; gap: 40px; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 250px;">
+                <img src="logo.png" alt="Rockie Mohlala" style="width: 180px; height: 180px; border-radius: 50%; border: 3px solid var(--accent); object-fit: contain; background: #fff; padding: 10px;">
+            </div>
+            <div style="flex: 3; min-width: 300px;">
+                <h3 style="color: #fff; font-size: 1.5rem; margin-top: 0;">Rockie Mohlala</h3>
+                <p style="color: var(--text-body); font-size: 1rem;">Vuka Automation was founded by Rockie, a Pretoria-based automation specialist with a strong technical background in computers and real-world experience in retail management, sales, and banking. That frontline experience is exactly why Vuka exists — after years of watching skilled teams buried in manual admin, repetitive data entry, and disconnected systems, Rockie set out to build AI systems that give that time back.</p>
+                <p style="color: var(--text-body); font-size: 1rem;">Today, Vuka partners with South African businesses across mining, logistics, finance, and beyond to replace manual busywork with intelligent automation — built practically, engineered properly, delivered personally.</p>
+            </div>
+        </div>
+        
+        <h3 style="color: var(--accent); margin-top: 40px; font-size: 1.3rem;">Why Work With Us</h3>
+        <ul style="color: var(--text-body); list-style-type: none; padding: 0; line-height: 2;">
+            <li>⚡ <strong>Fast build cycles:</strong> We move quickly without sacrificing quality.</li>
+            <li>🔍 <strong>Transparent process:</strong> Regular updates and clear milestones.</li>
+            <li>🤝 <strong>Direct founder access:</strong> No account-manager runaround. You talk directly to the builder.</li>
+            <li>📜 <strong>Under NDA & formal Service Agreement:</strong> Your data and IP are fully protected.</li>
+            <li>🛡️ <strong>30-day support included:</strong> Every project comes with post-launch support.</li>
+        </ul>
+        
+        <div style="background: rgba(255,107,53,0.15); border-left: 4px solid var(--orange); padding: 20px; border-radius: 8px; margin-top: 30px;">
+            <p style="color: #fff; margin: 0;"><strong>🚀 Pilot Partner Program:</strong> We're onboarding our first partners now. Book a discovery call and be one of the businesses featured here as a success story.</p>
+        </div>
+    </div>
+
+    <!-- FAQ SECTION -->
+    <div class="section">
+        <h2 class="section-title">FREQUENTLY ASKED <span>QUESTIONS</span></h2>
+        <div style="max-width: 800px; margin: 0 auto;">
+            <details style="background: var(--bg-dark); border-radius: 8px; padding: 20px; margin-bottom: 15px; cursor: pointer;">
+                <summary style="color: #fff; font-weight: bold; font-size: 1.1rem;">How long does a project take?</summary>
+                <p style="color: var(--text-body); margin-top: 10px;">Most single-process automations (Starter package) take 5-7 days. Multi-system projects (Growth) run 1-2 weeks. Enterprise builds are scoped individually after a discovery call.</p>
+            </details>
+            <details style="background: var(--bg-dark); border-radius: 8px; padding: 20px; margin-bottom: 15px; cursor: pointer;">
+                <summary style="color: #fff; font-weight: bold; font-size: 1.1rem;">Is my data safe?</summary>
+                <p style="color: var(--text-body); margin-top: 10px;">Every project starts with a signed NDA. We only access the systems needed for your specific automation, and don't retain your data beyond what's required to build and support the solution.</p>
+            </details>
+            <details style="background: var(--bg-dark); border-radius: 8px; padding: 20px; margin-bottom: 15px; cursor: pointer;">
+                <summary style="color: #fff; font-weight: bold; font-size: 1.1rem;">What if I don't have technical staff?</summary>
+                <p style="color: var(--text-body); margin-top: 10px;">Every package includes 30 days of post-launch support, and we document how everything works. For ongoing help beyond that, we offer optional support retainers.</p>
+            </details>
+            <details style="background: var(--bg-dark); border-radius: 8px; padding: 20px; margin-bottom: 15px; cursor: pointer;">
+                <summary style="color: #fff; font-weight: bold; font-size: 1.1rem;">How does payment work?</summary>
+                <p style="color: var(--text-body); margin-top: 10px;">50% deposit to begin, 50% on delivery. No hidden costs — pricing is agreed upfront in the proposal.</p>
+            </details>
+            <details style="background: var(--bg-dark); border-radius: 8px; padding: 20px; margin-bottom: 15px; cursor: pointer;">
+                <summary style="color: #fff; font-weight: bold; font-size: 1.1rem;">What tools/platforms do you work with?</summary>
+                <p style="color: var(--text-body); margin-top: 10px;">WhatsApp, email, existing CRMs, spreadsheets, and most common business software — we integrate with what you already use rather than forcing you onto new tools.</p>
+            </details>
+        </div>
     </div>
 
     <div class="section" id="contact" style="padding-top: 0;">
@@ -221,7 +280,7 @@
                 <p><span class="contact-icon">📧</span> <a href="mailto:vukaautomation@gmail.com" style="color:#00BAC5;">vukaautomation@gmail.com</a></p>
                 <p><span class="contact-icon">📞</span> <a href="https://calendly.com/vukaautomation" style="color:#00BAC5;">+27 71 444 3601</a></p>
                 <p><span class="contact-icon">📍</span> Pretoria, South Africa</p>
-                <a href="https://calendly.com/vukaautomation" class="cta-button" style="margin-top: 20px; display: inline-block;">Book a Free Call</a>
+                <a href="https://calendly.com/vukaautomation" class="nav-cta" style="margin-top: 20px; display: inline-block;">Book a Free Call</a>
             </div>
             <div class="form-container">
                 <form onsubmit="event.preventDefault(); window.location.href='https://calendly.com/vukaautomation';">
