@@ -104,9 +104,6 @@
         .contact-info h2 { color: #fff; font-size: 2.5rem; margin-bottom: 20px; }
         .contact-info p { color: var(--text-body); margin-bottom: 15px; font-size: 1.2rem; }
         .contact-icon { font-size: 1.2rem; margin-right: 10px; }
-        .form-container input, .form-container textarea { width: 100%; padding: 15px; margin-bottom: 15px; border-radius: 8px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3); color: #fff; font-family: 'Inter', sans-serif; }
-        .form-container input::placeholder, .form-container textarea::placeholder { color: var(--text-body); }
-        .form-container button { background-color: var(--orange); color: white; border: none; padding: 15px 30px; border-radius: 50px; font-weight: bold; cursor: pointer; }
         .calendly-inline-widget { min-width: 320px; height: 630px; border-radius: 12px; overflow: hidden; }
 
         /* FOOTER */
@@ -116,14 +113,14 @@
         .socials a:hover { color: var(--accent); transform: translateY(-3px); }
         .social-icon { width: 32px; height: 32px; fill: currentColor; }
 
-        /* LIVE ACTIVITY TICKER */
-        .ticker { position: fixed; bottom: 20px; left: 20px; background: var(--bg-dark); border: 1px solid var(--accent); border-radius: 50px; padding: 12px 20px; color: #fff; font-size: 0.9rem; z-index: 999; box-shadow: 0 10px 30px rgba(0,0,0,0.5); max-width: 350px; animation: fadeIn 1s ease; }
+        /* LIVE ACTIVITY TICKER (Hidden initially) */
+        .ticker { display: none; position: fixed; bottom: 20px; left: 20px; background: var(--bg-dark); border: 1px solid var(--accent); border-radius: 50px; padding: 12px 20px; color: #fff; font-size: 0.9rem; z-index: 999; box-shadow: 0 10px 30px rgba(0,0,0,0.5); max-width: 350px; animation: fadeIn 1s ease; }
         .ticker-dot { display: inline-block; width: 10px; height: 10px; background: #00ff88; border-radius: 50%; margin-right: 8px; animation: pulse 2s infinite; }
         @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(0,255,136,0.7); } 70% { box-shadow: 0 0 0 10px rgba(0,255,136,0); } 100% { box-shadow: 0 0 0 0 rgba(0,255,136,0); } }
 
         /* AGENT ROCKIE CHAT WIDGET */
         .chat-widget { position: fixed; bottom: 20px; right: 20px; z-index: 1000; }
-        .chat-bubble { width: 70px; height: 70px; border-radius: 50%; background: var(--orange); display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: 0.3s; border: 3px solid #fff; overflow: hidden; }
+        .chat-bubble { width: 70px; height: 70px; border-radius: 50%; background: var(--orange); display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: 0.3s; border: 3px solid #fff; overflow: hidden; position: relative; }
         .chat-bubble:hover { transform: scale(1.1); }
         .chat-bubble img { width: 100%; height: 100%; object-fit: cover; }
         .chat-online-dot { position: absolute; bottom: 5px; right: 5px; width: 15px; height: 15px; background: #00ff88; border-radius: 50%; border: 2px solid #fff; }
@@ -391,10 +388,10 @@
         </div>
     </footer>
 
-    <!-- LIVE ACTIVITY TICKER -->
+    <!-- LIVE ACTIVITY TICKER (Hidden initially) -->
     <div class="ticker" id="ticker">
         <span class="ticker-dot"></span>
-        <span id="ticker-text">Rockie just booked a Free AI Audit (2 minutes ago)</span>
+        <span id="ticker-text">New inquiry from a logistics company in Cape Town</span>
     </div>
 
     <!-- AGENT ROCKIE CHAT WIDGET -->
@@ -431,23 +428,27 @@
     <script>
         // LIVE ACTIVITY TICKER
         const tickerMessages = [
-            "Rockie just booked a Free AI Audit (2 minutes ago)",
-            "Vuka Automation is onboarding 3 pilot partners in Pretoria",
-            "1,247 automation hours saved this month",
-            "89 leads processed by Vuka bots today",
-            "New inquiry from a logistics company in Johannesburg"
+            "New inquiry from a logistics company in Cape Town",
+            "New inquiry from a manufacturing company in Pretoria",
+            "New inquiry from a retail group in Sandton",
+            "New inquiry from a financial firm in Centurion",
+            "New inquiry from an agricultural company in Stellenbosch"
         ];
         let tickerIndex = 0;
-        setInterval(() => {
-            tickerIndex = (tickerIndex + 1) % tickerMessages.length;
-            const tickerEl = document.getElementById('ticker-text');
-            tickerEl.style.opacity = 0;
-            setTimeout(() => {
-                tickerEl.textContent = tickerMessages[tickerIndex];
-                tickerEl.style.transition = 'opacity 0.5s';
-                tickerEl.style.opacity = 1;
-            }, 500);
-        }, 6000);
+        // Show the ticker after 40 minutes (40 * 60 * 1000 ms)
+        setTimeout(() => {
+            document.getElementById('ticker').style.display = 'block';
+            setInterval(() => {
+                tickerIndex = (tickerIndex + 1) % tickerMessages.length;
+                const tickerEl = document.getElementById('ticker-text');
+                tickerEl.style.opacity = 0;
+                setTimeout(() => {
+                    tickerEl.textContent = tickerMessages[tickerIndex];
+                    tickerEl.style.transition = 'opacity 0.5s';
+                    tickerEl.style.opacity = 1;
+                }, 500);
+            }, 15000); // Change message every 15 seconds
+        }, 40 * 60 * 1000); 
 
         // CHAT WIDGET
         function toggleChat() {
@@ -461,9 +462,9 @@
             document.getElementById('chatWindow').classList.remove('active');
         }
 
-        // SMART BRAIN - 30+ TOPICS
+        // FALLBACK BRAIN (Used if OpenRouter fails or key is missing)
         const brain = [
-            { keywords: ['price', 'cost', 'how much', 'pricing', 'rate', 'quote', 'budget', 'r8', 'r18'], answer: "Our projects start from R8,000 for a Starter package and R18,000 for a Growth package. Enterprise builds are custom-quoted. Would you like to book a free audit? 👉 https://calendly.com/vukaautomation" },
+            { keywords: ['price', 'cost', 'how much', 'pricing', 'rate', 'quote', 'budget'], answer: "For pricing, I'd recommend booking a quick call with Rockie so he can give you an accurate quote based on your specific needs. You can book directly here: 👉 https://calendly.com/vukaautomation" },
             { keywords: ['what do you do', 'services', 'help me with', 'automate what'], answer: "We build custom AI agents, automate document processing, connect your business systems (n8n), and create live dashboards. Basically, we eliminate manual admin so your team can focus on real work." },
             { keywords: ['how long', 'timeline', 'how fast', 'when can', 'delivery'], answer: "Most single-process automations take 5-7 days. Multi-system projects run 1-2 weeks. Enterprise builds are scoped after a discovery call." },
             { keywords: ['book', 'call', 'meeting', 'demo', 'audit', 'chat'], answer: "Awesome! Book a free 30-minute audit here: 👉 https://calendly.com/vukaautomation" },
@@ -494,14 +495,35 @@
             { keywords: ['bye', 'goodbye', 'cheers'], answer: "Thanks for stopping by! Reach out anytime: vukaautomation@gmail.com or +27 71 444 3601. 🚀" },
         ];
 
-        function getBotReply(message) {
-            const msg = message.toLowerCase();
-            for (const item of brain) {
-                for (const keyword of item.keywords) {
-                    if (msg.includes(keyword)) return item.answer;
+        async function getBotReply(message) {
+            // TRY OPENROUTER (REAL AI) FIRST
+            try {
+                const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+                    method: "POST",
+                    headers: {
+                        "Authorization": "Bearer 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", // YOUR VUKA AGENT KEY
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        model: "meta-llama/llama-3-8b-instruct:free", // Free AI model
+                        messages: [
+                            { role: "system", content: "You are Agent Rockie, a friendly sales agent for Vuka Automation, an AI automation agency in Pretoria, South Africa. We help businesses save 15+ hours a week by automating manual admin, document processing, and lead follow-ups. Do NOT give exact prices. Instead, say: 'For pricing, I'd recommend booking a quick call with Rockie so he can give you an accurate quote based on your specific needs. You can book here: https://calendly.com/vukaautomation'. If they ask for contact, give vukaautomation@gmail.com and +27 71 444 3601. Keep answers short, confident, and helpful." },
+                            { role: "user", content: message }
+                        ]
+                    })
+                });
+                const data = await response.json();
+                return data.choices[0].message.content;
+            } catch (error) {
+                // FALLBACK TO KEYWORD BRAIN IF OPENROUTER FAILS
+                const msg = message.toLowerCase();
+                for (const item of brain) {
+                    for (const keyword of item.keywords) {
+                        if (msg.includes(keyword)) return item.answer;
+                    }
                 }
+                return "Great question! Let me connect you directly with Rockie on WhatsApp so he can respond personally: 👉 https://wa.me/27714443601";
             }
-            return "Great question! I want to give you the right answer — let me connect you directly with Rockie on WhatsApp so he can respond personally: 👉 https://wa.me/27714443601";
         }
 
         function sendMessage() {
@@ -511,12 +533,18 @@
             const body = document.getElementById('chatBody');
             body.innerHTML += `<div class="chat-msg user">${msg}</div>`;
             input.value = '';
-            setTimeout(() => {
-                const reply = getBotReply(msg);
-                body.innerHTML += `<div class="chat-msg bot">${reply}</div>`;
+            body.scrollTop = body.scrollHeight;
+            
+            // Show "typing..." indicator
+            const typingId = 'typing-' + Date.now();
+            body.innerHTML += `<div class="chat-msg bot" id="${typingId}">Typing...</div>`;
+            body.scrollTop = body.scrollHeight;
+
+            setTimeout(async () => {
+                const reply = await getBotReply(msg);
+                document.getElementById(typingId).innerHTML = reply;
                 body.scrollTop = body.scrollHeight;
             }, 800);
-            body.scrollTop = body.scrollHeight;
         }
 
         // AUTO POPUP AFTER 5 SECONDS
