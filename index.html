@@ -5,25 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vuka Automation | Enterprise AI Systems Integrator</title>
     <meta name="description" content="Vuka Automation builds custom AI agents, workflow automation, and document processing systems for South African businesses in mining, logistics, finance & more. Book a free discovery call.">
-    
-    <meta property="og:title" content="Vuka Automation | Enterprise AI Systems Integrator">
-    <meta property="og:description" content="We build custom AI systems that eliminate manual admin, automate complex workflows, and help South African companies scale.">
-    <meta property="og:image" content="https://vukaautomation.github.io/vuka-automation/flow.jpg">
-    <meta property="og:url" content="https://vukaautomation.github.io/vuka-automation/">
-    <meta property="og:type" content="website">
-    
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Vuka Automation | Enterprise AI Systems Integrator">
-    <meta name="twitter:description" content="We build custom AI systems that eliminate manual admin, automate complex workflows, and help South African companies scale.">
-    <meta name="twitter:image" content="https://vukaautomation.github.io/vuka-automation/flow.jpg">
-
     <link rel="icon" type="image/png" href="logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
     <style>
         :root { --bg-primary: #00214E; --bg-dark: #031233; --accent: #00BAC5; --cyan: #00D4FF; --orange: #FF6B35; --text-main: #FFFFFF; --text-body: #A9B7C6; }
         body { font-family: 'Inter', sans-serif; background-color: var(--bg-primary); color: var(--text-main); margin: 0; line-height: 1.6; font-size: 16px; }
         
-        /* NAV */
         nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background-color: var(--bg-primary); border-bottom: 1px solid rgba(255,255,255,0.1); position: sticky; top: 0; z-index: 1000; }
         .logo img { height: 100px; max-width: 100%; object-fit: contain; }
         .nav-links a { color: var(--text-main); text-decoration: none; font-weight: 600; margin-left: 20px; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; }
@@ -31,32 +18,27 @@
         .nav-cta { background-color: var(--orange); color: #fff; padding: 12px 24px; border-radius: 50px; text-decoration: none; font-weight: 600; }
         .nav-cta:hover { background-color: #fff; color: var(--bg-primary); }
 
-        /* HERO */
         .hero { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; padding: 80px 40px; align-items: center; background: radial-gradient(circle at 100% 0%, #031233 0%, #00214E 60%); }
         .hero h1 { font-family: 'Space Grotesk', sans-serif; font-size: 4.5rem; line-height: 1.1; margin-bottom: 20px; color: #fff; text-transform: uppercase; }
         .hero h1 span { color: var(--accent); }
         .hero p { color: var(--text-body); font-size: 1.2rem; margin-bottom: 30px; max-width: 500px; }
         .hero-graphic { width: 100%; height: auto; max-height: 500px; border-radius: 20px; object-fit: contain; }
 
-        /* SECTIONS */
         .section { padding: 80px 40px; max-width: 1100px; margin: 0 auto; }
         .section-title { font-size: 3rem; margin: 0 0 10px 0; color: #fff; text-transform: uppercase; }
         .section-title span { color: var(--accent); }
         .section-intro { color: var(--text-body); font-size: 1.1rem; margin-bottom: 50px; max-width: 700px; }
 
-        /* PROBLEMS WE SOLVE */
         .problem-card { background: var(--bg-dark); border: 1px solid rgba(0, 212, 255, 0.3); border-radius: 12px; padding: 30px; transition: 0.3s; }
         .problem-card:hover { border-color: var(--accent); transform: translateY(-5px); }
         .problem-icon { font-size: 2.5rem; margin-bottom: 15px; }
         .problem-card h3 { color: #fff; font-size: 1.3rem; margin: 0 0 10px 0; }
         .problem-card p { color: var(--text-body); margin: 0; font-size: 0.95rem; }
 
-        /* INDUSTRIES */
         .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
         .industry-item h3 { font-size: 1.2rem; margin: 0 0 5px 0; color: #fff; }
         .industry-item p { color: var(--text-body); margin: 0; font-size: 0.95rem; }
 
-        /* SERVICES */
         .services-list { max-width: 800px; margin: 0 auto; }
         .service-row { display: flex; align-items: center; gap: 20px; padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
         .service-row:last-child { border-bottom: none; }
@@ -65,18 +47,15 @@
         .service-title { font-size: 1.3rem; font-weight: 700; color: #fff; font-family: 'Space Grotesk', sans-serif; }
         .service-subtitle { font-size: 0.95rem; color: var(--text-body); margin-top: 5px; }
         
-        /* SHOWCASE IMAGES */
         .image-showcase { text-align: center; }
         .image-showcase img { width: 100%; max-width: 900px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
 
-        /* HOW WE WORK */
         .how-work { max-width: 800px; margin: 0 auto; }
         .step { display: flex; gap: 20px; margin-bottom: 30px; align-items: flex-start; }
         .step-number { font-family: 'Space Grotesk', sans-serif; font-size: 2rem; font-weight: 800; color: var(--orange); min-width: 60px; }
         .step-content h3 { margin: 0 0 5px 0; color: #fff; font-size: 1.4rem; }
         .step-content p { color: var(--text-body); margin: 0; font-size: 0.95rem; }
 
-        /* STACK SECTION */
         .stack-section { background-color: #0A1F44; padding: 80px 40px; }
         .stack-header { color: #FFFFFF; font-family: 'Space Grotesk', sans-serif; font-size: 3rem; margin-bottom: 50px; text-align: center; text-transform: uppercase; }
         .stack-wrapper { max-width: 900px; margin: 0 auto; }
@@ -85,40 +64,33 @@
         .capability { color: #FFFFFF; font-weight: 700; font-size: 1.3rem; }
         .technology-pill { background-color: var(--cyan); color: #000000; padding: 10px 20px; border-radius: 50px; font-weight: 700; font-size: 1rem; }
 
-        /* SOLUTIONS */
         .solution-item { text-align: center; padding: 20px; background: var(--bg-dark); border-radius: 12px; margin-bottom: 20px; }
         .solution-icon { font-size: 2rem; margin-bottom: 10px; }
         .solution-item h3 { font-size: 1.1rem; margin: 0 0 5px 0; color: #fff; }
         .solution-item p { color: var(--text-body); margin: 0; font-size: 0.9rem; }
 
-        /* TOOLS WE INTEGRATE WITH */
         .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; max-width: 900px; margin: 0 auto; }
         .tool-pill { background: var(--bg-dark); border: 1px solid rgba(0, 212, 255, 0.3); border-radius: 50px; padding: 15px 20px; text-align: center; color: #fff; font-weight: 600; transition: 0.3s; }
         .tool-pill:hover { border-color: var(--accent); transform: translateY(-3px); }
 
-        /* FOUNDER SECTION */
         .founder-section { background-color: var(--bg-dark); border-radius: 20px; padding: 60px 40px; margin-bottom: 40px; }
 
-        /* CONTACT */
         .contact-section { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; background: var(--bg-dark); padding: 80px 40px; border-radius: 20px; margin-bottom: 40px; }
         .contact-info h2 { color: #fff; font-size: 2.5rem; margin-bottom: 20px; }
         .contact-info p { color: var(--text-body); margin-bottom: 15px; font-size: 1.2rem; }
         .contact-icon { font-size: 1.2rem; margin-right: 10px; }
         .calendly-inline-widget { min-width: 320px; height: 630px; border-radius: 12px; overflow: hidden; }
 
-        /* FOOTER */
         footer { text-align: center; padding: 40px; border-top: 1px solid rgba(255,255,255,0.1); color: var(--text-body); }
         .socials { display: flex; justify-content: center; gap: 20px; margin-top: 20px; }
         .socials a { color: var(--text-body); transition: 0.3s; }
         .socials a:hover { color: var(--accent); transform: translateY(-3px); }
         .social-icon { width: 32px; height: 32px; fill: currentColor; }
 
-        /* LIVE ACTIVITY TICKER (Hidden initially) */
         .ticker { display: none; position: fixed; bottom: 20px; left: 20px; background: var(--bg-dark); border: 1px solid var(--accent); border-radius: 50px; padding: 12px 20px; color: #fff; font-size: 0.9rem; z-index: 999; box-shadow: 0 10px 30px rgba(0,0,0,0.5); max-width: 350px; animation: fadeIn 1s ease; }
         .ticker-dot { display: inline-block; width: 10px; height: 10px; background: #00ff88; border-radius: 50%; margin-right: 8px; animation: pulse 2s infinite; }
         @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(0,255,136,0.7); } 70% { box-shadow: 0 0 0 10px rgba(0,255,136,0); } 100% { box-shadow: 0 0 0 0 rgba(0,255,136,0); } }
 
-        /* AGENT ROCKIE CHAT WIDGET */
         .chat-widget { position: fixed; bottom: 20px; right: 20px; z-index: 1000; }
         .chat-bubble { width: 70px; height: 70px; border-radius: 50%; background: var(--orange); display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: 0.3s; border: 3px solid #fff; overflow: hidden; position: relative; }
         .chat-bubble:hover { transform: scale(1.1); }
@@ -180,26 +152,13 @@
         <img src="flow.jpg" class="hero-graphic" alt="Vuka Agent Flow">
     </div>
 
-    <!-- PROBLEMS WE SOLVE -->
     <div class="section" id="problems">
         <h2 class="section-title">THE PROBLEMS <span>WE SOLVE</span></h2>
         <p class="section-intro">If any of these sound familiar, we can fix it.</p>
         <div class="grid-3">
-            <div class="problem-card">
-                <div class="problem-icon">🕐</div>
-                <h3>Hours lost to manual admin</h3>
-                <p>Your team is stuck on WhatsApp, email, and spreadsheets instead of doing real work.</p>
-            </div>
-            <div class="problem-card">
-                <div class="problem-icon">📄</div>
-                <h3>Drowning in paperwork</h3>
-                <p>Invoices, PODs, contracts, and compliance reports piling up with no automation.</p>
-            </div>
-            <div class="problem-card">
-                <div class="problem-icon">📉</div>
-                <h3>Leads going cold</h3>
-                <p>Follow-ups are manual, slow, and inconsistent, so you lose sales to faster competitors.</p>
-            </div>
+            <div class="problem-card"><div class="problem-icon">🕐</div><h3>Hours lost to manual admin</h3><p>Your team is stuck on WhatsApp, email, and spreadsheets instead of doing real work.</p></div>
+            <div class="problem-card"><div class="problem-icon">📄</div><h3>Drowning in paperwork</h3><p>Invoices, PODs, contracts, and compliance reports piling up with no automation.</p></div>
+            <div class="problem-card"><div class="problem-icon">📉</div><h3>Leads going cold</h3><p>Follow-ups are manual, slow, and inconsistent, so you lose sales to faster competitors.</p></div>
         </div>
     </div>
 
@@ -278,7 +237,6 @@
         </div>
     </div>
 
-    <!-- TOOLS WE INTEGRATE WITH -->
     <div class="section">
         <h2 class="section-title">TOOLS WE <span>INTEGRATE WITH</span></h2>
         <p class="section-intro">We connect with the platforms you already use — no need to replace your existing software.</p>
@@ -388,13 +346,11 @@
         </div>
     </footer>
 
-    <!-- LIVE ACTIVITY TICKER (Hidden initially) -->
     <div class="ticker" id="ticker">
         <span class="ticker-dot"></span>
         <span id="ticker-text">New inquiry from a logistics company in Cape Town</span>
     </div>
 
-    <!-- AGENT ROCKIE CHAT WIDGET -->
     <div class="chat-widget">
         <div class="chat-popup" id="chatPopup">
             <h4>👋 Hi, I'm Agent Rockie</h4>
@@ -426,7 +382,6 @@
 
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
     <script>
-        // LIVE ACTIVITY TICKER
         const tickerMessages = [
             "New inquiry from a logistics company in Cape Town",
             "New inquiry from a manufacturing company in Pretoria",
@@ -435,7 +390,6 @@
             "New inquiry from an agricultural company in Stellenbosch"
         ];
         let tickerIndex = 0;
-        // Show the ticker after 40 minutes (40 * 60 * 1000 ms)
         setTimeout(() => {
             document.getElementById('ticker').style.display = 'block';
             setInterval(() => {
@@ -447,10 +401,9 @@
                     tickerEl.style.transition = 'opacity 0.5s';
                     tickerEl.style.opacity = 1;
                 }, 500);
-            }, 15000); // Change message every 15 seconds
+            }, 15000);
         }, 40 * 60 * 1000); 
 
-        // CHAT WIDGET
         function toggleChat() {
             document.getElementById('chatPopup').classList.toggle('active');
         }
@@ -462,7 +415,6 @@
             document.getElementById('chatWindow').classList.remove('active');
         }
 
-        // FALLBACK BRAIN (Used if OpenRouter fails or key is missing)
         const brain = [
             { keywords: ['price', 'cost', 'how much', 'pricing', 'rate', 'quote', 'budget'], answer: "For pricing, I'd recommend booking a quick call with Rockie so he can give you an accurate quote based on your specific needs. You can book directly here: 👉 https://calendly.com/vukaautomation" },
             { keywords: ['what do you do', 'services', 'help me with', 'automate what'], answer: "We build custom AI agents, automate document processing, connect your business systems (n8n), and create live dashboards. Basically, we eliminate manual admin so your team can focus on real work." },
@@ -471,7 +423,7 @@
             { keywords: ['whatsapp', 'email', 'phone', 'contact', 'reach you'], answer: "You can reach Rockie directly: 📧 vukaautomation@gmail.com or 📞 +27 71 444 3601 (WhatsApp)." },
             { keywords: ['nda', 'data safe', 'secure', 'confidential', 'popia', 'privacy'], answer: "Every project starts with a signed NDA. We only access what's needed for your automation and never retain your data beyond the build." },
             { keywords: ['where', 'based', 'location', 'pretoria', 'johannesburg', 'remote'], answer: "We're based in Pretoria, South Africa and serve clients nationwide — remote and on-site." },
-            { keywords: ['who is', 'founder', 'rockie', 'about you', 'ceo'], answer: "Rockie Mohlala is the founder of Vuka Automation — a Pretoria-based automation specialist with a background in computers, retail, sales, and banking." },
+            { keywords: ['who is', 'founder', 'rockie', 'about you', 'ceo', 'who are you'], answer: "I'm Agent Rockie, the AI assistant for Vuka Automation. I work alongside Rockie Mohlala, our founder, to help South African businesses automate manual admin, document processing, and lead follow-ups. For more details, connect with Rockie on WhatsApp: https://wa.me/27714443601" },
             { keywords: ['mining', 'energy'], answer: "For Mining & Energy, we automate compliance reports, safety data entry, and equipment monitoring." },
             { keywords: ['logistics', 'ecommerce', 'e-commerce', 'delivery'], answer: "For Logistics & E-Commerce, we automate fleet route planning, order tracking, and dispatch workflows." },
             { keywords: ['finance', 'banking', 'kyc', 'financial'], answer: "For Financial Services, we automate document processing, KYC checks, and client onboarding." },
@@ -496,33 +448,43 @@
         ];
 
         async function getBotReply(message) {
-            // TRY OPENROUTER (REAL AI) FIRST
             try {
                 const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
                     method: "POST",
                     headers: {
-                        "Authorization": "Bearer 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", // YOUR VUKA AGENT KEY
-                        "Content-Type": "application/json"
+                        "Authorization": "Bearer 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",
+                        "Content-Type": "application/json",
+                        "HTTP-Referer": "https://vukaautomation.github.io/vuka-automation/",
+                        "X-Title": "Vuka Automation"
                     },
                     body: JSON.stringify({
-                        model: "meta-llama/llama-3-8b-instruct:free", // Free AI model
+                        model: "mistralai/mistral-7b-instruct:free",
                         messages: [
                             { role: "system", content: "You are Agent Rockie, a friendly sales agent for Vuka Automation, an AI automation agency in Pretoria, South Africa. We help businesses save 15+ hours a week by automating manual admin, document processing, and lead follow-ups. Do NOT give exact prices. Instead, say: 'For pricing, I'd recommend booking a quick call with Rockie so he can give you an accurate quote based on your specific needs. You can book here: https://calendly.com/vukaautomation'. If they ask for contact, give vukaautomation@gmail.com and +27 71 444 3601. Keep answers short, confident, and helpful." },
                             { role: "user", content: message }
                         ]
                     })
                 });
+
+                if (!response.ok) {
+                    throw new Error("OpenRouter Error: " + response.status);
+                }
+
                 const data = await response.json();
-                return data.choices[0].message.content;
+                if (data.choices && data.choices.length > 0) {
+                    return data.choices[0].message.content;
+                } else {
+                    throw new Error("No choices returned from AI");
+                }
             } catch (error) {
-                // FALLBACK TO KEYWORD BRAIN IF OPENROUTER FAILS
+                console.error("AI Brain Error:", error);
                 const msg = message.toLowerCase();
                 for (const item of brain) {
                     for (const keyword of item.keywords) {
                         if (msg.includes(keyword)) return item.answer;
                     }
                 }
-                return "Great question! Let me connect you directly with Rockie on WhatsApp so he can respond personally: 👉 https://wa.me/27714443601";
+                return "I'm having a quick technical moment, but I don't want to leave you hanging. Let me connect you directly with Rockie on WhatsApp so he can respond personally: 👉 https://wa.me/27714443601";
             }
         }
 
@@ -535,7 +497,6 @@
             input.value = '';
             body.scrollTop = body.scrollHeight;
             
-            // Show "typing..." indicator
             const typingId = 'typing-' + Date.now();
             body.innerHTML += `<div class="chat-msg bot" id="${typingId}">Typing...</div>`;
             body.scrollTop = body.scrollHeight;
@@ -547,7 +508,6 @@
             }, 800);
         }
 
-        // AUTO POPUP AFTER 5 SECONDS
         setTimeout(() => {
             if (!document.getElementById('chatWindow').classList.contains('active')) {
                 document.getElementById('chatPopup').classList.add('active');
