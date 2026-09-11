@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vuka Automation | Enterprise AI Systems Integrator</title>
     <meta name="description" content="Vuka Automation builds custom AI agents, workflow automation, and document processing systems for South African businesses in mining, logistics, finance & more. Book a free discovery call.">
+    
+    <meta property="og:title" content="Vuka Automation | Enterprise AI Systems Integrator">
+    <meta property="og:description" content="We build custom AI systems that eliminate manual admin, automate complex workflows, and help South African companies scale.">
+    <meta property="og:image" content="https://vukaautomation.github.io/vuka-automation/flow.jpg">
+    <meta property="og:url" content="https://vukaautomation.github.io/vuka-automation/">
+    <meta property="og:type" content="website">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vuka Automation | Enterprise AI Systems Integrator">
+    <meta name="twitter:description" content="We build custom AI systems that eliminate manual admin, automate complex workflows, and help South African companies scale.">
+    <meta name="twitter:image" content="https://vukaautomation.github.io/vuka-automation/flow.jpg">
+
     <link rel="icon" type="image/png" href="logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
     <style>
@@ -115,6 +127,7 @@
         .chat-input-area { padding: 15px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; gap: 10px; }
         .chat-input-area input { flex: 1; padding: 12px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.2); background: var(--bg-primary); color: #fff; font-size: 0.9rem; }
         .chat-input-area button { background: var(--orange); color: #fff; border: none; padding: 12px 20px; border-radius: 50px; cursor: pointer; font-weight: bold; }
+        .chat-link { color: var(--cyan); font-weight: bold; text-decoration: underline; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
         @media (max-width: 900px) {
@@ -415,15 +428,18 @@
             document.getElementById('chatWindow').classList.remove('active');
         }
 
+        const calendlyLink = "<a href='https://calendly.com/vukaautomation' target='_blank' class='chat-link'>Book a Free Audit →</a>";
+        const whatsappLink = "<a href='https://wa.me/27714443601' target='_blank' class='chat-link'>Chat on WhatsApp →</a>";
+
         const brain = [
-            { keywords: ['price', 'cost', 'how much', 'pricing', 'rate', 'quote', 'budget'], answer: "For pricing, I'd recommend booking a quick call with Rockie so he can give you an accurate quote based on your specific needs. You can book directly here: 👉 https://calendly.com/vukaautomation" },
+            { keywords: ['price', 'cost', 'how much', 'pricing', 'rate', 'quote', 'budget'], answer: "For pricing, I'd recommend booking a quick call with Rockie so he can give you an accurate quote based on your specific needs. You can book directly here: " + calendlyLink },
             { keywords: ['what do you do', 'services', 'help me with', 'automate what'], answer: "We build custom AI agents, automate document processing, connect your business systems (n8n), and create live dashboards. Basically, we eliminate manual admin so your team can focus on real work." },
             { keywords: ['how long', 'timeline', 'how fast', 'when can', 'delivery'], answer: "Most single-process automations take 5-7 days. Multi-system projects run 1-2 weeks. Enterprise builds are scoped after a discovery call." },
-            { keywords: ['book', 'call', 'meeting', 'demo', 'audit', 'chat'], answer: "Awesome! Book a free 30-minute audit here: 👉 https://calendly.com/vukaautomation" },
+            { keywords: ['book', 'call', 'meeting', 'demo', 'audit', 'chat'], answer: "Awesome! Book a free 30-minute audit here: " + calendlyLink },
             { keywords: ['whatsapp', 'email', 'phone', 'contact', 'reach you'], answer: "You can reach Rockie directly: 📧 vukaautomation@gmail.com or 📞 +27 71 444 3601 (WhatsApp)." },
             { keywords: ['nda', 'data safe', 'secure', 'confidential', 'popia', 'privacy'], answer: "Every project starts with a signed NDA. We only access what's needed for your automation and never retain your data beyond the build." },
             { keywords: ['where', 'based', 'location', 'pretoria', 'johannesburg', 'remote'], answer: "We're based in Pretoria, South Africa and serve clients nationwide — remote and on-site." },
-            { keywords: ['who is', 'founder', 'rockie', 'about you', 'ceo', 'who are you'], answer: "I'm Agent Rockie, the AI assistant for Vuka Automation. I work alongside Rockie Mohlala, our founder, to help South African businesses automate manual admin, document processing, and lead follow-ups. For more details, connect with Rockie on WhatsApp: https://wa.me/27714443601" },
+            { keywords: ['who is', 'founder', 'rockie', 'about you', 'ceo', 'who are you'], answer: "I'm Agent Rockie, the AI assistant for Vuka Automation. I work alongside Rockie Mohlala, our founder, to help South African businesses automate manual admin, document processing, and lead follow-ups. For more details, connect with Rockie on WhatsApp: " + whatsappLink },
             { keywords: ['mining', 'energy'], answer: "For Mining & Energy, we automate compliance reports, safety data entry, and equipment monitoring." },
             { keywords: ['logistics', 'ecommerce', 'e-commerce', 'delivery'], answer: "For Logistics & E-Commerce, we automate fleet route planning, order tracking, and dispatch workflows." },
             { keywords: ['finance', 'banking', 'kyc', 'financial'], answer: "For Financial Services, we automate document processing, KYC checks, and client onboarding." },
@@ -448,44 +464,13 @@
         ];
 
         async function getBotReply(message) {
-            try {
-                const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
-                    method: "POST",
-                    headers: {
-                        "Authorization": "Bearer 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",
-                        "Content-Type": "application/json",
-                        "HTTP-Referer": "https://vukaautomation.github.io/vuka-automation/",
-                        "X-Title": "Vuka Automation"
-                    },
-                    body: JSON.stringify({
-                        model: "mistralai/mistral-7b-instruct:free",
-                        messages: [
-                            { role: "system", content: "You are Agent Rockie, a friendly sales agent for Vuka Automation, an AI automation agency in Pretoria, South Africa. We help businesses save 15+ hours a week by automating manual admin, document processing, and lead follow-ups. Do NOT give exact prices. Instead, say: 'For pricing, I'd recommend booking a quick call with Rockie so he can give you an accurate quote based on your specific needs. You can book here: https://calendly.com/vukaautomation'. If they ask for contact, give vukaautomation@gmail.com and +27 71 444 3601. Keep answers short, confident, and helpful." },
-                            { role: "user", content: message }
-                        ]
-                    })
-                });
-
-                if (!response.ok) {
-                    throw new Error("OpenRouter Error: " + response.status);
+            const msg = message.toLowerCase();
+            for (const item of brain) {
+                for (const keyword of item.keywords) {
+                    if (msg.includes(keyword)) return item.answer;
                 }
-
-                const data = await response.json();
-                if (data.choices && data.choices.length > 0) {
-                    return data.choices[0].message.content;
-                } else {
-                    throw new Error("No choices returned from AI");
-                }
-            } catch (error) {
-                console.error("AI Brain Error:", error);
-                const msg = message.toLowerCase();
-                for (const item of brain) {
-                    for (const keyword of item.keywords) {
-                        if (msg.includes(keyword)) return item.answer;
-                    }
-                }
-                return "I'm having a quick technical moment, but I don't want to leave you hanging. Let me connect you directly with Rockie on WhatsApp so he can respond personally: 👉 https://wa.me/27714443601";
             }
+            return "Great question! I want to give you the right answer — let me connect you directly with Rockie on WhatsApp so he can respond personally: " + whatsappLink;
         }
 
         function sendMessage() {
