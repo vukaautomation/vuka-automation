@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vuka Automation | Enterprise AI Systems Integrator</title>
     <meta name="description" content="Vuka Automation builds custom AI agents, workflow automation, and document processing systems for South African businesses in mining, logistics, finance & more. Book a free discovery call.">
+    
+    <meta property="og:title" content="Vuka Automation | Enterprise AI Systems Integrator">
+    <meta property="og:description" content="We build custom AI systems that eliminate manual admin, automate complex workflows, and help South African companies scale.">
+    <meta property="og:image" content="https://vukaautomation.github.io/vuka-automation/flow.jpg">
+    <meta property="og:url" content="https://vukaautomation.github.io/vuka-automation/">
+    <meta property="og:type" content="website">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vuka Automation | Enterprise AI Systems Integrator">
+    <meta name="twitter:description" content="We build custom AI systems that eliminate manual admin, automate complex workflows, and help South African companies scale.">
+    <meta name="twitter:image" content="https://vukaautomation.github.io/vuka-automation/flow.jpg">
+
     <link rel="icon" type="image/png" href="logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
     <style>
@@ -31,6 +43,13 @@
         .section-title { font-size: 3rem; margin: 0 0 10px 0; color: #fff; text-transform: uppercase; }
         .section-title span { color: var(--accent); }
         .section-intro { color: var(--text-body); font-size: 1.1rem; margin-bottom: 50px; max-width: 700px; }
+
+        /* PROBLEMS WE SOLVE */
+        .problem-card { background: var(--bg-dark); border: 1px solid rgba(0, 212, 255, 0.3); border-radius: 12px; padding: 30px; transition: 0.3s; }
+        .problem-card:hover { border-color: var(--accent); transform: translateY(-5px); }
+        .problem-icon { font-size: 2.5rem; margin-bottom: 15px; }
+        .problem-card h3 { color: #fff; font-size: 1.3rem; margin: 0 0 10px 0; }
+        .problem-card p { color: var(--text-body); margin: 0; font-size: 0.95rem; }
 
         /* INDUSTRIES */
         .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
@@ -72,6 +91,11 @@
         .solution-item h3 { font-size: 1.1rem; margin: 0 0 5px 0; color: #fff; }
         .solution-item p { color: var(--text-body); margin: 0; font-size: 0.9rem; }
 
+        /* TOOLS WE INTEGRATE WITH */
+        .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; max-width: 900px; margin: 0 auto; }
+        .tool-pill { background: var(--bg-dark); border: 1px solid rgba(0, 212, 255, 0.3); border-radius: 50px; padding: 15px 20px; text-align: center; color: #fff; font-weight: 600; transition: 0.3s; }
+        .tool-pill:hover { border-color: var(--accent); transform: translateY(-3px); }
+
         /* FOUNDER SECTION */
         .founder-section { background-color: var(--bg-dark); border-radius: 20px; padding: 60px 40px; margin-bottom: 40px; }
 
@@ -83,6 +107,7 @@
         .form-container input, .form-container textarea { width: 100%; padding: 15px; margin-bottom: 15px; border-radius: 8px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3); color: #fff; font-family: 'Inter', sans-serif; }
         .form-container input::placeholder, .form-container textarea::placeholder { color: var(--text-body); }
         .form-container button { background-color: var(--orange); color: white; border: none; padding: 15px 30px; border-radius: 50px; font-weight: bold; cursor: pointer; }
+        .calendly-inline-widget { min-width: 320px; height: 630px; border-radius: 12px; overflow: hidden; }
 
         /* FOOTER */
         footer { text-align: center; padding: 40px; border-top: 1px solid rgba(255,255,255,0.1); color: var(--text-body); }
@@ -90,6 +115,38 @@
         .socials a { color: var(--text-body); transition: 0.3s; }
         .socials a:hover { color: var(--accent); transform: translateY(-3px); }
         .social-icon { width: 32px; height: 32px; fill: currentColor; }
+
+        /* LIVE ACTIVITY TICKER */
+        .ticker { position: fixed; bottom: 20px; left: 20px; background: var(--bg-dark); border: 1px solid var(--accent); border-radius: 50px; padding: 12px 20px; color: #fff; font-size: 0.9rem; z-index: 999; box-shadow: 0 10px 30px rgba(0,0,0,0.5); max-width: 350px; animation: fadeIn 1s ease; }
+        .ticker-dot { display: inline-block; width: 10px; height: 10px; background: #00ff88; border-radius: 50%; margin-right: 8px; animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(0,255,136,0.7); } 70% { box-shadow: 0 0 0 10px rgba(0,255,136,0); } 100% { box-shadow: 0 0 0 0 rgba(0,255,136,0); } }
+
+        /* AGENT ROCKIE CHAT WIDGET */
+        .chat-widget { position: fixed; bottom: 20px; right: 20px; z-index: 1000; }
+        .chat-bubble { width: 70px; height: 70px; border-radius: 50%; background: var(--orange); display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: 0.3s; border: 3px solid #fff; overflow: hidden; }
+        .chat-bubble:hover { transform: scale(1.1); }
+        .chat-bubble img { width: 100%; height: 100%; object-fit: cover; }
+        .chat-online-dot { position: absolute; bottom: 5px; right: 5px; width: 15px; height: 15px; background: #00ff88; border-radius: 50%; border: 2px solid #fff; }
+        .chat-popup { position: absolute; bottom: 90px; right: 0; background: var(--bg-dark); border: 1px solid var(--accent); border-radius: 15px; padding: 20px; width: 280px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); display: none; }
+        .chat-popup.active { display: block; animation: fadeIn 0.3s ease; }
+        .chat-popup h4 { color: #fff; margin: 0 0 10px 0; }
+        .chat-popup p { color: var(--text-body); font-size: 0.9rem; margin: 0 0 15px 0; }
+        .chat-popup button { background: var(--orange); color: #fff; border: none; padding: 10px 20px; border-radius: 50px; cursor: pointer; font-weight: bold; width: 100%; }
+        .chat-window { position: absolute; bottom: 90px; right: 0; background: var(--bg-dark); border: 1px solid var(--accent); border-radius: 15px; width: 350px; height: 500px; display: none; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5); overflow: hidden; }
+        .chat-window.active { display: flex; animation: fadeIn 0.3s ease; }
+        .chat-header { background: var(--bg-primary); padding: 15px 20px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .chat-header img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+        .chat-header-info h5 { margin: 0; color: #fff; font-size: 1rem; }
+        .chat-header-info span { font-size: 0.8rem; color: #00ff88; }
+        .chat-close { margin-left: auto; color: var(--text-body); cursor: pointer; font-size: 1.2rem; }
+        .chat-body { flex: 1; padding: 20px; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; }
+        .chat-msg { max-width: 80%; padding: 10px 15px; border-radius: 15px; font-size: 0.9rem; }
+        .chat-msg.bot { background: var(--bg-primary); color: #fff; align-self: flex-start; border-bottom-left-radius: 5px; }
+        .chat-msg.user { background: var(--orange); color: #fff; align-self: flex-end; border-bottom-right-radius: 5px; }
+        .chat-input-area { padding: 15px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; gap: 10px; }
+        .chat-input-area input { flex: 1; padding: 12px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.2); background: var(--bg-primary); color: #fff; font-size: 0.9rem; }
+        .chat-input-area button { background: var(--orange); color: #fff; border: none; padding: 12px 20px; border-radius: 50px; cursor: pointer; font-weight: bold; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
         @media (max-width: 900px) {
             .hero { grid-template-columns: 1fr; text-align: center; padding-top: 60px; }
@@ -100,6 +157,8 @@
             .stack-header { font-size: 2rem; }
             .stack-row { flex-direction: column; align-items: flex-start; gap: 15px; }
             .technology-pill { width: 100%; text-align: center; }
+            .chat-window { width: 90vw; right: 5vw; }
+            .ticker { max-width: 80vw; font-size: 0.8rem; }
         }
     </style>
 </head>
@@ -107,6 +166,7 @@
     <nav>
         <div class="logo"><img src="logo.png" alt="Vuka Automation"></div>
         <div class="nav-links">
+            <a href="#problems">Problems</a>
             <a href="#industries">Industries</a>
             <a href="#services">Services</a>
             <a href="#stack">Stack</a>
@@ -118,9 +178,32 @@
     <div class="hero">
         <div>
             <h1>AUTOMATION THAT <br><span>AWAKENS GROWTH</span></h1>
-            <p>We are a Pretoria-based Enterprise AI Systems Integrator. We build custom AI systems that eliminate manual admin, automate complex workflows, and help South African companies scale without hiring more people.</p>
+            <p>We help South African companies save 15+ hours a week by automating manual admin, document processing, and lead follow-ups. Based in Pretoria.</p>
         </div>
         <img src="flow.jpg" class="hero-graphic" alt="Vuka Agent Flow">
+    </div>
+
+    <!-- PROBLEMS WE SOLVE -->
+    <div class="section" id="problems">
+        <h2 class="section-title">THE PROBLEMS <span>WE SOLVE</span></h2>
+        <p class="section-intro">If any of these sound familiar, we can fix it.</p>
+        <div class="grid-3">
+            <div class="problem-card">
+                <div class="problem-icon">🕐</div>
+                <h3>Hours lost to manual admin</h3>
+                <p>Your team is stuck on WhatsApp, email, and spreadsheets instead of doing real work.</p>
+            </div>
+            <div class="problem-card">
+                <div class="problem-icon">📄</div>
+                <h3>Drowning in paperwork</h3>
+                <p>Invoices, PODs, contracts, and compliance reports piling up with no automation.</p>
+            </div>
+            <div class="problem-card">
+                <div class="problem-icon">📉</div>
+                <h3>Leads going cold</h3>
+                <p>Follow-ups are manual, slow, and inconsistent, so you lose sales to faster competitors.</p>
+            </div>
+        </div>
     </div>
 
     <div class="section" id="industries">
@@ -198,6 +281,26 @@
         </div>
     </div>
 
+    <!-- TOOLS WE INTEGRATE WITH -->
+    <div class="section">
+        <h2 class="section-title">TOOLS WE <span>INTEGRATE WITH</span></h2>
+        <p class="section-intro">We connect with the platforms you already use — no need to replace your existing software.</p>
+        <div class="tools-grid">
+            <div class="tool-pill">🐍 Python</div>
+            <div class="tool-pill">⚙️ n8n</div>
+            <div class="tool-pill">💬 WhatsApp Business</div>
+            <div class="tool-pill">🗄️ Supabase</div>
+            <div class="tool-pill">🤖 OpenAI / Gemini</div>
+            <div class="tool-pill">📊 Streamlit</div>
+            <div class="tool-pill">📧 Gmail / Outlook</div>
+            <div class="tool-pill">💳 Stripe / PayFast</div>
+            <div class="tool-pill">🌐 Playwright</div>
+            <div class="tool-pill">🐳 Docker</div>
+            <div class="tool-pill">🔗 REST APIs</div>
+            <div class="tool-pill">📦 Google Sheets</div>
+        </div>
+    </div>
+
     <div class="section">
         <h2 class="section-title">HOW <span>WE WORK</span></h2>
         <p class="section-intro">A clear and structured process from first conversation to full handover.</p>
@@ -210,7 +313,6 @@
         </div>
     </div>
 
-    <!-- FOUNDER & TRUST SECTION -->
     <div class="section founder-section">
         <h2 class="section-title">MEET THE <span>FOUNDER</span></h2>
         <div style="display: flex; align-items: center; gap: 40px; flex-wrap: wrap;">
@@ -239,7 +341,6 @@
         </div>
     </div>
 
-    <!-- FAQ SECTION -->
     <div class="section">
         <h2 class="section-title">FREQUENTLY ASKED <span>QUESTIONS</span></h2>
         <div style="max-width: 800px; margin: 0 auto;">
@@ -274,18 +375,8 @@
                 <p><span class="contact-icon">📧</span> <a href="mailto:vukaautomation@gmail.com" style="color:#00BAC5;">vukaautomation@gmail.com</a></p>
                 <p><span class="contact-icon">📞</span> <a href="https://calendly.com/vukaautomation" style="color:#00BAC5;">+27 71 444 3601</a></p>
                 <p><span class="contact-icon">📍</span> Pretoria, South Africa</p>
-                <a href="https://calendly.com/vukaautomation" class="nav-cta" style="margin-top: 20px; display: inline-block;">Book a Free Call</a>
             </div>
-            <div class="form-container">
-                <form onsubmit="event.preventDefault(); window.location.href='https://calendly.com/vukaautomation';">
-                    <input type="text" placeholder="Full Name" required>
-                    <input type="email" placeholder="Email" required>
-                    <input type="tel" placeholder="Phone Number">
-                    <input type="text" placeholder="Company Name">
-                    <textarea rows="4" placeholder="Message" required></textarea>
-                    <button type="submit">Book a Free Call</button>
-                </form>
-            </div>
+            <div class="calendly-inline-widget" data-url="https://calendly.com/vukaautomation?hide_gdpr_banner=1&primary_color=FF6B35"></div>
         </div>
     </div>
 
@@ -299,5 +390,141 @@
             <a href="https://wa.me/27714443601" target="_blank"><svg class="social-icon" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
         </div>
     </footer>
+
+    <!-- LIVE ACTIVITY TICKER -->
+    <div class="ticker" id="ticker">
+        <span class="ticker-dot"></span>
+        <span id="ticker-text">Rockie just booked a Free AI Audit (2 minutes ago)</span>
+    </div>
+
+    <!-- AGENT ROCKIE CHAT WIDGET -->
+    <div class="chat-widget">
+        <div class="chat-popup" id="chatPopup">
+            <h4>👋 Hi, I'm Agent Rockie</h4>
+            <p>How can I help you automate your business today?</p>
+            <button onclick="openChat()">Ask me anything →</button>
+        </div>
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <img src="founder.jpg" alt="Agent Rockie">
+                <div class="chat-header-info">
+                    <h5>Agent Rockie</h5>
+                    <span>🟢 Online now</span>
+                </div>
+                <span class="chat-close" onclick="closeChat()">✕</span>
+            </div>
+            <div class="chat-body" id="chatBody">
+                <div class="chat-msg bot">Hi! I'm Rockie from Vuka Automation. Ask me anything about automation — pricing, timelines, services, or how we can help your business.</div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chatInput" placeholder="Type your question..." onkeypress="if(event.key==='Enter') sendMessage()">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+        <div class="chat-bubble" onclick="toggleChat()">
+            <img src="founder.jpg" alt="Agent Rockie">
+            <span class="chat-online-dot"></span>
+        </div>
+    </div>
+
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <script>
+        // LIVE ACTIVITY TICKER
+        const tickerMessages = [
+            "Rockie just booked a Free AI Audit (2 minutes ago)",
+            "Vuka Automation is onboarding 3 pilot partners in Pretoria",
+            "1,247 automation hours saved this month",
+            "89 leads processed by Vuka bots today",
+            "New inquiry from a logistics company in Johannesburg"
+        ];
+        let tickerIndex = 0;
+        setInterval(() => {
+            tickerIndex = (tickerIndex + 1) % tickerMessages.length;
+            const tickerEl = document.getElementById('ticker-text');
+            tickerEl.style.opacity = 0;
+            setTimeout(() => {
+                tickerEl.textContent = tickerMessages[tickerIndex];
+                tickerEl.style.transition = 'opacity 0.5s';
+                tickerEl.style.opacity = 1;
+            }, 500);
+        }, 6000);
+
+        // CHAT WIDGET
+        function toggleChat() {
+            document.getElementById('chatPopup').classList.toggle('active');
+        }
+        function openChat() {
+            document.getElementById('chatPopup').classList.remove('active');
+            document.getElementById('chatWindow').classList.add('active');
+        }
+        function closeChat() {
+            document.getElementById('chatWindow').classList.remove('active');
+        }
+
+        // SMART BRAIN - 30+ TOPICS
+        const brain = [
+            { keywords: ['price', 'cost', 'how much', 'pricing', 'rate', 'quote', 'budget', 'r8', 'r18'], answer: "Our projects start from R8,000 for a Starter package and R18,000 for a Growth package. Enterprise builds are custom-quoted. Would you like to book a free audit? 👉 https://calendly.com/vukaautomation" },
+            { keywords: ['what do you do', 'services', 'help me with', 'automate what'], answer: "We build custom AI agents, automate document processing, connect your business systems (n8n), and create live dashboards. Basically, we eliminate manual admin so your team can focus on real work." },
+            { keywords: ['how long', 'timeline', 'how fast', 'when can', 'delivery'], answer: "Most single-process automations take 5-7 days. Multi-system projects run 1-2 weeks. Enterprise builds are scoped after a discovery call." },
+            { keywords: ['book', 'call', 'meeting', 'demo', 'audit', 'chat'], answer: "Awesome! Book a free 30-minute audit here: 👉 https://calendly.com/vukaautomation" },
+            { keywords: ['whatsapp', 'email', 'phone', 'contact', 'reach you'], answer: "You can reach Rockie directly: 📧 vukaautomation@gmail.com or 📞 +27 71 444 3601 (WhatsApp)." },
+            { keywords: ['nda', 'data safe', 'secure', 'confidential', 'popia', 'privacy'], answer: "Every project starts with a signed NDA. We only access what's needed for your automation and never retain your data beyond the build." },
+            { keywords: ['where', 'based', 'location', 'pretoria', 'johannesburg', 'remote'], answer: "We're based in Pretoria, South Africa and serve clients nationwide — remote and on-site." },
+            { keywords: ['who is', 'founder', 'rockie', 'about you', 'ceo'], answer: "Rockie Mohlala is the founder of Vuka Automation — a Pretoria-based automation specialist with a background in computers, retail, sales, and banking." },
+            { keywords: ['mining', 'energy'], answer: "For Mining & Energy, we automate compliance reports, safety data entry, and equipment monitoring." },
+            { keywords: ['logistics', 'ecommerce', 'e-commerce', 'delivery'], answer: "For Logistics & E-Commerce, we automate fleet route planning, order tracking, and dispatch workflows." },
+            { keywords: ['finance', 'banking', 'kyc', 'financial'], answer: "For Financial Services, we automate document processing, KYC checks, and client onboarding." },
+            { keywords: ['retail', 'wholesale', 'stock', 'inventory'], answer: "For Retail & Wholesale, we automate inventory management, stock forecasting, and supplier communications." },
+            { keywords: ['manufacturing', 'factory'], answer: "For Manufacturing, we automate quality control logs, invoice processing, and supply chain alerts." },
+            { keywords: ['real estate', 'property'], answer: "For Real Estate, we automate lead qualification, lease document processing, and property updates." },
+            { keywords: ['agriculture', 'farming', 'agri'], answer: "For Agriculture, we automate yield tracking, supplier data collection, and export paperwork." },
+            { keywords: ['tourism', 'hospitality', 'hotel', 'booking'], answer: "For Tourism & Hospitality, we automate booking management, customer feedback, and staff scheduling." },
+            { keywords: ['telecom', 'ict', 'network'], answer: "For Telecommunications & ICT, we automate network ticket routing, customer onboarding, and data integration." },
+            { keywords: ['ai', 'agent', 'chatbot'], answer: "We build custom AI Agents using RAG and LLMs that understand your data, answer questions, and take action across your systems 24/7." },
+            { keywords: ['document', 'invoice', 'contract', 'paperwork'], answer: "We automate document processing — extracting and routing data from invoices, contracts, and compliance docs without manual entry." },
+            { keywords: ['dashboard', 'analytics', 'report'], answer: "We build live executive dashboards so leadership always has real-time visibility into operations." },
+            { keywords: ['python', 'code', 'software'], answer: "We use Python and FastAPI to build custom software tailored to your operational needs." },
+            { keywords: ['n8n', 'workflow', 'integration'], answer: "We use n8n to connect your existing tools and automate complex multi-step workflows." },
+            { keywords: ['whatsapp automation', 'voice agent'], answer: "We deploy AI voice and WhatsApp agents that handle customer conversations, qualify leads, and respond instantly, 24/7." },
+            { keywords: ['why you', 'why vuka', 'why choose'], answer: "We're fast, transparent, and founder-led. You talk directly to the builder — no account-manager runaround. Plus NDA + 30-day support included." },
+            { keywords: ['payment', 'deposit', 'invoice'], answer: "50% deposit to begin, 50% on delivery. Pricing is agreed upfront — no hidden costs." },
+            { keywords: ['support', 'after', 'maintain'], answer: "Every project includes 30 days of post-launch support, with optional monthly retainers available." },
+            { keywords: ['hello', 'hi', 'hey', 'good'], answer: "Hey! 👋 I'm Agent Rockie. Ask me about pricing, services, timelines, or how we can help your business." },
+            { keywords: ['thank', 'thanks'], answer: "You're welcome! Anything else I can help with?" },
+            { keywords: ['bye', 'goodbye', 'cheers'], answer: "Thanks for stopping by! Reach out anytime: vukaautomation@gmail.com or +27 71 444 3601. 🚀" },
+        ];
+
+        function getBotReply(message) {
+            const msg = message.toLowerCase();
+            for (const item of brain) {
+                for (const keyword of item.keywords) {
+                    if (msg.includes(keyword)) return item.answer;
+                }
+            }
+            return "Great question! I want to give you the right answer — let me connect you directly with Rockie on WhatsApp so he can respond personally: 👉 https://wa.me/27714443601";
+        }
+
+        function sendMessage() {
+            const input = document.getElementById('chatInput');
+            const msg = input.value.trim();
+            if (!msg) return;
+            const body = document.getElementById('chatBody');
+            body.innerHTML += `<div class="chat-msg user">${msg}</div>`;
+            input.value = '';
+            setTimeout(() => {
+                const reply = getBotReply(msg);
+                body.innerHTML += `<div class="chat-msg bot">${reply}</div>`;
+                body.scrollTop = body.scrollHeight;
+            }, 800);
+            body.scrollTop = body.scrollHeight;
+        }
+
+        // AUTO POPUP AFTER 5 SECONDS
+        setTimeout(() => {
+            if (!document.getElementById('chatWindow').classList.contains('active')) {
+                document.getElementById('chatPopup').classList.add('active');
+            }
+        }, 5000);
+    </script>
 </body>
 </html>
