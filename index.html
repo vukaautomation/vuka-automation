@@ -175,6 +175,7 @@
             .technology-pill { width: 100%; text-align: center; }
             .chat-window { width: 90vw; right: 5vw; }
             .ticker { max-width: 80vw; font-size: 0.8rem; }
+            #calculator .grid-3 { grid-template-columns: 1fr !important; }
         }
     </style>
 </head>
@@ -186,6 +187,7 @@
             <a href="#industries">Industries</a>
             <a href="#services">Services</a>
             <a href="#stack">Stack</a>
+            <a href="#calculator">Calculator</a>
             <a href="#contact">Contact</a>
         </div>
         <a href="https://calendly.com/vukaautomation" class="nav-cta">Book a Free Call</a>
@@ -371,6 +373,39 @@
         </div>
     </div>
 
+    <!-- INTERACTIVE ROI CALCULATOR -->
+    <div class="section" id="calculator">
+        <h2 class="section-title">CALCULATE YOUR <span>SAVINGS</span></h2>
+        <p class="section-intro">See exactly how much time and money manual admin is costing your business right now.</p>
+        
+        <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 20px; padding: 40px; max-width: 800px; margin: 0 auto; backdrop-filter: blur(10px);">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <div>
+                    <label style="color: #fff; display: block; margin-bottom: 8px; font-weight: 600;">Number of admin staff</label>
+                    <input type="number" id="calc-staff" value="3" min="1" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); background: var(--bg-primary); color: #fff; font-size: 1rem;">
+                </div>
+                <div>
+                    <label style="color: #fff; display: block; margin-bottom: 8px; font-weight: 600;">Average hourly rate (R)</label>
+                    <input type="number" id="calc-rate" value="150" min="1" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); background: var(--bg-primary); color: #fff; font-size: 1rem;">
+                </div>
+                <div style="grid-column: span 2;">
+                    <label style="color: #fff; display: block; margin-bottom: 8px; font-weight: 600;">Hours per week spent on repetitive admin (per person)</label>
+                    <input type="number" id="calc-hours" value="10" min="1" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); background: var(--bg-primary); color: #fff; font-size: 1rem;">
+                </div>
+            </div>
+
+            <button onclick="calculateSavings()" style="background: var(--orange); color: #fff; border: none; padding: 15px 30px; border-radius: 50px; font-weight: bold; cursor: pointer; width: 100%; margin-top: 20px; font-size: 1.1rem; transition: 0.3s;">Calculate My Savings</button>
+
+            <div id="calc-results" style="display: none; margin-top: 30px; padding-top: 30px; border-top: 1px solid var(--card-border); text-align: center;">
+                <p style="color: var(--text-body); margin: 0;">You are currently losing approximately:</p>
+                <h3 id="result-money" style="font-size: 3rem; color: var(--orange); font-family: 'Space Grotesk', sans-serif; margin: 10px 0;">R0</h3>
+                <p style="color: var(--text-body); margin: 0;">every single month to manual admin.</p>
+                <p style="color: #fff; font-weight: 600; margin-top: 20px; margin-bottom: 20px;">Vuka Automation can eliminate up to 80% of this.</p>
+                <a href="https://calendly.com/vukaautomation" target="_blank" style="background: var(--accent); color: #fff; text-decoration: none; padding: 15px 30px; border-radius: 50px; font-weight: bold; display: inline-block;">Claim Your Savings →</a>
+            </div>
+        </div>
+    </div>
+
     <div class="section">
         <h2 class="section-title">FREQUENTLY ASKED <span>QUESTIONS</span></h2>
         <div style="max-width: 800px; margin: 0 auto;">
@@ -478,6 +513,24 @@
                 }, 500);
             }, 15000);
         }, 40 * 60 * 1000); 
+
+        // CALCULATOR FUNCTION
+        function calculateSavings() {
+            const staff = parseInt(document.getElementById('calc-staff').value) || 0;
+            const rate = parseInt(document.getElementById('calc-rate').value) || 0;
+            const hours = parseInt(document.getElementById('calc-hours').value) || 0;
+
+            // Calculate weekly cost (staff * rate * hours)
+            const weeklyCost = staff * rate * hours;
+            // Calculate monthly cost (weekly * 4.33 weeks)
+            const monthlyCost = Math.round(weeklyCost * 4.33);
+
+            // Format as ZAR currency
+            const formattedCost = new Intl.NumberFormat('en-ZA', { style: 'currency', currency: 'ZAR', maximumFractionDigits: 0 }).format(monthlyCost);
+
+            document.getElementById('result-money').innerText = formattedCost;
+            document.getElementById('calc-results').style.display = 'block';
+        }
 
         function toggleChat() {
             document.getElementById('chatPopup').classList.toggle('active');
