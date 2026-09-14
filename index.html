@@ -20,30 +20,47 @@
     <link rel="icon" type="image/png" href="logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
     <style>
-        :root { --bg-primary: #00214E; --bg-dark: #031233; --accent: #00BAC5; --cyan: #00D4FF; --orange: #FF6B35; --text-main: #FFFFFF; --text-body: #A9B7C6; }
-        body { font-family: 'Inter', sans-serif; background-color: var(--bg-primary); color: var(--text-main); margin: 0; line-height: 1.6; font-size: 16px; }
+        /* --- VUKA ORIGINAL COLOR PALETTE --- */
+        :root { 
+            --bg-primary: #00214E; 
+            --bg-dark: #031233; 
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --accent: #00BAC5; 
+            --cyan: #00D4FF; 
+            --orange: #FF6B35; 
+            --text-main: #FFFFFF; 
+            --text-body: #A9B7C6; 
+        }
         
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background-color: var(--bg-primary); border-bottom: 1px solid rgba(255,255,255,0.1); position: sticky; top: 0; z-index: 1000; }
-        .logo img { height: 100px; max-width: 100%; object-fit: contain; }
-        .nav-links a { color: var(--text-main); text-decoration: none; font-weight: 600; margin-left: 20px; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-primary); color: var(--text-main); margin: 0; line-height: 1.6; font-size: 16px; overflow-x: hidden; }
+        
+        /* Navbar - Glassmorphism */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background-color: rgba(0, 33, 78, 0.8); backdrop-filter: blur(15px); border-bottom: 1px solid var(--card-border); position: sticky; top: 0; z-index: 1000; }
+        .logo img { height: 80px; max-width: 100%; object-fit: contain; }
+        .nav-links a { color: var(--text-main); text-decoration: none; font-weight: 600; margin-left: 20px; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem; transition: 0.3s; }
         .nav-links a:hover { color: var(--accent); }
-        .nav-cta { background-color: var(--orange); color: #fff; padding: 12px 24px; border-radius: 50px; text-decoration: none; font-weight: 600; }
+        .nav-cta { background-color: var(--orange); color: #fff; padding: 12px 24px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: 0.3s; }
         .nav-cta:hover { background-color: #fff; color: var(--bg-primary); }
 
-        .hero { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; padding: 80px 40px; align-items: center; background: radial-gradient(circle at 100% 0%, #031233 0%, #00214E 60%); }
-        .hero h1 { font-family: 'Space Grotesk', sans-serif; font-size: 4.5rem; line-height: 1.1; margin-bottom: 20px; color: #fff; text-transform: uppercase; }
-        .hero h1 span { color: var(--accent); }
+        /* Hero Section - Glowing Gradient Vibe */
+        .hero { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; padding: 120px 40px; align-items: center; position: relative; }
+        .hero::before { content: ''; position: absolute; top: -20%; left: 50%; transform: translateX(-50%); width: 80vw; height: 80vh; background: radial-gradient(circle, rgba(0, 186, 197, 0.15) 0%, rgba(255, 107, 53, 0.05) 40%, transparent 70%); z-index: -1; border-radius: 50%; filter: blur(80px); }
+        .hero h1 { font-family: 'Space Grotesk', sans-serif; font-size: 4.5rem; line-height: 1.1; margin-bottom: 20px; background: linear-gradient(90deg, #FFFFFF, #A9B7C6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-transform: uppercase; }
+        .hero h1 span { background: linear-gradient(90deg, var(--accent), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .hero p { color: var(--text-body); font-size: 1.2rem; margin-bottom: 30px; max-width: 500px; }
-        .hero-graphic { width: 100%; height: auto; max-height: 500px; border-radius: 20px; object-fit: contain; }
+        .hero-graphic { width: 100%; height: auto; max-height: 500px; border-radius: 20px; object-fit: contain; filter: drop-shadow(0 0 30px rgba(0, 186, 197, 0.2)); }
         .trust-bar { display: flex; gap: 25px; flex-wrap: wrap; margin-top: 25px; color: var(--cyan); font-size: 0.95rem; font-weight: 600; }
 
+        /* Sections */
         .section { padding: 80px 40px; max-width: 1100px; margin: 0 auto; }
-        .section-title { font-size: 3rem; margin: 0 0 10px 0; color: #fff; text-transform: uppercase; }
+        .section-title { font-size: 3rem; margin: 0 0 10px 0; color: #fff; text-transform: uppercase; font-family: 'Space Grotesk', sans-serif; }
         .section-title span { color: var(--accent); }
         .section-intro { color: var(--text-body); font-size: 1.1rem; margin-bottom: 50px; max-width: 700px; }
 
-        .problem-card { background: var(--bg-dark); border: 1px solid rgba(0, 212, 255, 0.3); border-radius: 12px; padding: 30px; transition: 0.3s; }
-        .problem-card:hover { border-color: var(--accent); transform: translateY(-5px); }
+        /* Glassmorphism Cards */
+        .problem-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 16px; padding: 30px; transition: 0.4s ease; backdrop-filter: blur(10px); }
+        .problem-card:hover { border-color: var(--accent); transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0, 186, 197, 0.1); }
         .problem-icon { font-size: 2.5rem; margin-bottom: 15px; }
         .problem-card h3 { color: #fff; font-size: 1.3rem; margin: 0 0 10px 0; }
         .problem-card p { color: var(--text-body); margin: 0; font-size: 0.95rem; }
@@ -52,58 +69,72 @@
         .industry-item h3 { font-size: 1.2rem; margin: 0 0 5px 0; color: #fff; }
         .industry-item p { color: var(--text-body); margin: 0; font-size: 0.95rem; }
 
-        .services-list { max-width: 800px; margin: 0 auto; }
-        .service-row { display: flex; align-items: center; gap: 20px; padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        /* Services */
+        .services-list { max-width: 850px; margin: 0 auto; }
+        .service-row { display: flex; align-items: center; gap: 20px; padding: 20px 0; border-bottom: 1px solid var(--card-border); transition: 0.3s; }
+        .service-row:hover { padding-left: 10px; }
         .service-row:last-child { border-bottom: none; }
         .service-icon { font-size: 2.5rem; width: 60px; text-align: center; }
         .service-text { display: flex; flex-direction: column; }
         .service-title { font-size: 1.3rem; font-weight: 700; color: #fff; font-family: 'Space Grotesk', sans-serif; }
         .service-subtitle { font-size: 0.95rem; color: var(--text-body); margin-top: 5px; }
         
+        /* Showcase Images */
         .image-showcase { text-align: center; }
-        .image-showcase img { width: 100%; max-width: 900px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .image-showcase img { width: 100%; max-width: 900px; border-radius: 20px; border: 1px solid var(--card-border); box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
 
+        /* How We Work */
         .how-work { max-width: 800px; margin: 0 auto; }
         .step { display: flex; gap: 20px; margin-bottom: 30px; align-items: flex-start; }
         .step-number { font-family: 'Space Grotesk', sans-serif; font-size: 2rem; font-weight: 800; color: var(--orange); min-width: 60px; }
         .step-content h3 { margin: 0 0 5px 0; color: #fff; font-size: 1.4rem; }
         .step-content p { color: var(--text-body); margin: 0; font-size: 0.95rem; }
 
-        .stack-section { background-color: #0A1F44; padding: 80px 40px; }
+        /* Stack Section */
+        .stack-section { background-color: var(--bg-dark); padding: 80px 40px; border-top: 1px solid var(--card-border); border-bottom: 1px solid var(--card-border); }
         .stack-header { color: #FFFFFF; font-family: 'Space Grotesk', sans-serif; font-size: 3rem; margin-bottom: 50px; text-align: center; text-transform: uppercase; }
         .stack-wrapper { max-width: 900px; margin: 0 auto; }
-        .stack-row { display: flex; justify-content: space-between; align-items: center; padding: 25px 0; border-bottom: 1px solid rgba(255,255,255,0.15); }
+        .stack-row { display: flex; justify-content: space-between; align-items: center; padding: 25px 0; border-bottom: 1px solid var(--card-border); transition: 0.3s; }
+        .stack-row:hover { background: rgba(255,255,255,0.02); padding-left: 10px; padding-right: 10px; border-radius: 8px; }
         .stack-row:last-child { border-bottom: none; }
-        .capability { color: #FFFFFF; font-weight: 700; font-size: 1.3rem; }
-        .technology-pill { background-color: var(--cyan); color: #000000; padding: 10px 20px; border-radius: 50px; font-weight: 700; font-size: 1rem; }
+        .capability { color: #FFFFFF; font-weight: 700; font-size: 1.2rem; }
+        .technology-pill { background-color: var(--cyan); color: #000000; padding: 8px 18px; border-radius: 50px; font-weight: 700; font-size: 0.95rem; }
 
-        .solution-item { text-align: center; padding: 20px; background: var(--bg-dark); border-radius: 12px; margin-bottom: 20px; }
+        /* Solutions */
+        .solution-item { text-align: center; padding: 25px; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 16px; transition: 0.4s; }
+        .solution-item:hover { border-color: var(--accent); transform: translateY(-5px); }
         .solution-icon { font-size: 2rem; margin-bottom: 10px; }
         .solution-item h3 { font-size: 1.1rem; margin: 0 0 5px 0; color: #fff; }
         .solution-item p { color: var(--text-body); margin: 0; font-size: 0.9rem; }
 
+        /* Tools */
         .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; max-width: 900px; margin: 0 auto; }
-        .tool-pill { background: var(--bg-dark); border: 1px solid rgba(0, 212, 255, 0.3); border-radius: 50px; padding: 15px 20px; text-align: center; color: #fff; font-weight: 600; transition: 0.3s; }
-        .tool-pill:hover { border-color: var(--accent); transform: translateY(-3px); }
+        .tool-pill { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 50px; padding: 15px 20px; text-align: center; color: #fff; font-weight: 600; transition: 0.3s; }
+        .tool-pill:hover { border-color: var(--accent); transform: translateY(-3px); background: rgba(0, 186, 197, 0.1); }
 
-        .founder-section { background-color: var(--bg-dark); border-radius: 20px; padding: 60px 40px; margin-bottom: 40px; }
+        /* Founder */
+        .founder-section { background: var(--bg-dark); border: 1px solid var(--card-border); border-radius: 20px; padding: 60px 40px; margin-bottom: 40px; }
 
-        .contact-section { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; background: var(--bg-dark); padding: 80px 40px; border-radius: 20px; margin-bottom: 40px; }
-        .contact-info h2 { color: #fff; font-size: 2.5rem; margin-bottom: 20px; }
+        /* Contact */
+        .contact-section { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; background: var(--bg-dark); border: 1px solid var(--card-border); padding: 80px 40px; border-radius: 20px; margin-bottom: 40px; }
+        .contact-info h2 { color: #fff; font-size: 2.5rem; margin-bottom: 20px; font-family: 'Space Grotesk', sans-serif; }
         .contact-info p { color: var(--text-body); margin-bottom: 15px; font-size: 1.2rem; }
         .contact-icon { font-size: 1.2rem; margin-right: 10px; }
         .calendly-inline-widget { min-width: 320px; height: 630px; border-radius: 12px; overflow: hidden; }
 
-        footer { text-align: center; padding: 40px; border-top: 1px solid rgba(255,255,255,0.1); color: var(--text-body); }
+        /* Footer */
+        footer { text-align: center; padding: 40px; border-top: 1px solid var(--card-border); color: var(--text-body); }
         .socials { display: flex; justify-content: center; gap: 20px; margin-top: 20px; }
         .socials a { color: var(--text-body); transition: 0.3s; }
         .socials a:hover { color: var(--accent); transform: translateY(-3px); }
         .social-icon { width: 32px; height: 32px; fill: currentColor; }
 
+        /* Ticker */
         .ticker { display: none; position: fixed; bottom: 20px; left: 20px; background: var(--bg-dark); border: 1px solid var(--accent); border-radius: 50px; padding: 12px 20px; color: #fff; font-size: 0.9rem; z-index: 999; box-shadow: 0 10px 30px rgba(0,0,0,0.5); max-width: 350px; animation: fadeIn 1s ease; }
         .ticker-dot { display: inline-block; width: 10px; height: 10px; background: #00ff88; border-radius: 50%; margin-right: 8px; animation: pulse 2s infinite; }
         @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(0,255,136,0.7); } 70% { box-shadow: 0 0 0 10px rgba(0,255,136,0); } 100% { box-shadow: 0 0 0 0 rgba(0,255,136,0); } }
 
+        /* Agent Rockie Chat */
         .chat-widget { position: fixed; bottom: 20px; right: 20px; z-index: 1000; }
         .chat-bubble { width: 70px; height: 70px; border-radius: 50%; background: var(--orange); display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: 0.3s; border: 3px solid #fff; overflow: hidden; position: relative; }
         .chat-bubble:hover { transform: scale(1.1); }
@@ -116,7 +147,7 @@
         .chat-popup button { background: var(--orange); color: #fff; border: none; padding: 10px 20px; border-radius: 50px; cursor: pointer; font-weight: bold; width: 100%; }
         .chat-window { position: absolute; bottom: 90px; right: 0; background: var(--bg-dark); border: 1px solid var(--accent); border-radius: 15px; width: 350px; height: 500px; display: none; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5); overflow: hidden; }
         .chat-window.active { display: flex; animation: fadeIn 0.3s ease; }
-        .chat-header { background: var(--bg-primary); padding: 15px 20px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .chat-header { background: var(--bg-primary); padding: 15px 20px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid var(--card-border); }
         .chat-header img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
         .chat-header-info h5 { margin: 0; color: #fff; font-size: 1rem; }
         .chat-header-info span { font-size: 0.8rem; color: #00ff88; }
@@ -125,19 +156,20 @@
         .chat-msg { max-width: 80%; padding: 10px 15px; border-radius: 15px; font-size: 0.9rem; }
         .chat-msg.bot { background: var(--bg-primary); color: #fff; align-self: flex-start; border-bottom-left-radius: 5px; }
         .chat-msg.user { background: var(--orange); color: #fff; align-self: flex-end; border-bottom-right-radius: 5px; }
-        .chat-input-area { padding: 15px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; gap: 10px; }
-        .chat-input-area input { flex: 1; padding: 12px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.2); background: var(--bg-primary); color: #fff; font-size: 0.9rem; }
+        .chat-input-area { padding: 15px; border-top: 1px solid var(--card-border); display: flex; gap: 10px; }
+        .chat-input-area input { flex: 1; padding: 12px; border-radius: 50px; border: 1px solid var(--card-border); background: var(--bg-primary); color: #fff; font-size: 0.9rem; }
         .chat-input-area button { background: var(--orange); color: #fff; border: none; padding: 12px 20px; border-radius: 50px; cursor: pointer; font-weight: bold; }
         .chat-link { color: var(--cyan); font-weight: bold; text-decoration: underline; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
+        /* Mobile Responsive */
         @media (max-width: 900px) {
             .hero { grid-template-columns: 1fr; text-align: center; padding-top: 60px; }
             .hero-graphic { max-height: 300px; margin-top: 20px; }
             .trust-bar { justify-content: center; }
             .grid-3 { grid-template-columns: 1fr; }
             .contact-section { grid-template-columns: 1fr; }
-            .logo img { height: 80px; }
+            .logo img { height: 60px; }
             .stack-header { font-size: 2rem; }
             .stack-row { flex-direction: column; align-items: flex-start; gap: 15px; }
             .technology-pill { width: 100%; text-align: center; }
@@ -210,6 +242,7 @@
             <div class="service-row"><div class="service-icon">📊</div><div class="service-text"><div class="service-title">6. Predictive Analytics & Executive Dashboards</div><div class="service-subtitle">Real-time dashboards that give leadership clear visibility and help forecast problems before they happen.</div></div></div>
             <div class="service-row"><div class="service-icon">🌐</div><div class="service-text"><div class="service-title">7. Browser & Web Automation (Playwright)</div><div class="service-subtitle">Automate repetitive tasks across websites and web-based systems reliably at scale.</div></div></div>
             <div class="service-row"><div class="service-icon">🚀</div><div class="service-text"><div class="service-title">8. Custom Software Development (Python & FastAPI)</div><div class="service-subtitle">Tailored backend systems and APIs built specifically for your operational needs.</div></div></div>
+            <div class="service-row"><div class="service-icon">💻</div><div class="service-text"><div class="service-title">9. Web & Software Development</div><div class="service-subtitle">Professional websites, web applications, and custom software built to convert and scale.</div></div></div>
         </div>
     </div>
 
@@ -341,23 +374,23 @@
     <div class="section">
         <h2 class="section-title">FREQUENTLY ASKED <span>QUESTIONS</span></h2>
         <div style="max-width: 800px; margin: 0 auto;">
-            <details style="background: var(--bg-dark); border-radius: 8px; padding: 20px; margin-bottom: 15px; cursor: pointer;">
+            <details style="background: var(--bg-dark); border: 1px solid var(--card-border); border-radius: 12px; padding: 20px; margin-bottom: 15px; cursor: pointer; transition: 0.3s;">
                 <summary style="color: #fff; font-weight: bold; font-size: 1.1rem;">How long does a project take?</summary>
                 <p style="color: var(--text-body); margin-top: 10px;">Most single-process automations (Starter package) take 5-7 days. Multi-system projects (Growth) run 1-2 weeks. Enterprise builds are scoped individually after a discovery call.</p>
             </details>
-            <details style="background: var(--bg-dark); border-radius: 8px; padding: 20px; margin-bottom: 15px; cursor: pointer;">
+            <details style="background: var(--bg-dark); border: 1px solid var(--card-border); border-radius: 12px; padding: 20px; margin-bottom: 15px; cursor: pointer; transition: 0.3s;">
                 <summary style="color: #fff; font-weight: bold; font-size: 1.1rem;">Is my data safe?</summary>
                 <p style="color: var(--text-body); margin-top: 10px;">Every project starts with a signed NDA. We only access the systems needed for your specific automation, and don't retain your data beyond what's required to build and support the solution.</p>
             </details>
-            <details style="background: var(--bg-dark); border-radius: 8px; padding: 20px; margin-bottom: 15px; cursor: pointer;">
+            <details style="background: var(--bg-dark); border: 1px solid var(--card-border); border-radius: 12px; padding: 20px; margin-bottom: 15px; cursor: pointer; transition: 0.3s;">
                 <summary style="color: #fff; font-weight: bold; font-size: 1.1rem;">What if I don't have technical staff?</summary>
                 <p style="color: var(--text-body); margin-top: 10px;">Every package includes 30 days of post-launch support, and we document how everything works. For ongoing help beyond that, we offer optional support retainers.</p>
             </details>
-            <details style="background: var(--bg-dark); border-radius: 8px; padding: 20px; margin-bottom: 15px; cursor: pointer;">
+            <details style="background: var(--bg-dark); border: 1px solid var(--card-border); border-radius: 12px; padding: 20px; margin-bottom: 15px; cursor: pointer; transition: 0.3s;">
                 <summary style="color: #fff; font-weight: bold; font-size: 1.1rem;">How does payment work?</summary>
                 <p style="color: var(--text-body); margin-top: 10px;">50% deposit to begin, 50% on delivery. No hidden costs — pricing is agreed upfront in the proposal.</p>
             </details>
-            <details style="background: var(--bg-dark); border-radius: 8px; padding: 20px; margin-bottom: 15px; cursor: pointer;">
+            <details style="background: var(--bg-dark); border: 1px solid var(--card-border); border-radius: 12px; padding: 20px; margin-bottom: 15px; cursor: pointer; transition: 0.3s;">
                 <summary style="color: #fff; font-weight: bold; font-size: 1.1rem;">What tools/platforms do you work with?</summary>
                 <p style="color: var(--text-body); margin-top: 10px;">WhatsApp, email, existing CRMs, spreadsheets, and most common business software — we integrate with what you already use rather than forcing you onto new tools.</p>
             </details>
